@@ -7,6 +7,10 @@ public class ObjetoRompible : MonoBehaviour
     [SerializeField] private bool esRompible = true;
     [SerializeField] private float velocidadMinimaRuptura = 3.0f;
 
+    [Header("Identificador para Persistencia")]
+    [Tooltip("Escribe un ID único para este objeto si quieres que no vuelva a aparecer al cambiar de escena (Ej: 'Florero_Sala_01')")]
+    [SerializeField] private string idUnicoObjeto;
+
     [Header("Progreso del Nivel")]
     [Tooltip("Marca esta casilla si romper este objeto cuenta como uno de los objetivos del nivel")]
     [SerializeField] private bool cuentaComoObjetivoNivel = false;
@@ -24,6 +28,17 @@ public class ObjetoRompible : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        if (!string.IsNullOrEmpty(idUnicoObjeto) && GameManager.Instance != null)
+        {
+            if (GameManager.Instance.EsPuzzleCompletado(idUnicoObjeto))
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
     private void OnCollisionEnter(Collision colision)
     {
         if (!esRompible || yaSeRompio) return;
@@ -36,17 +51,24 @@ public class ObjetoRompible : MonoBehaviour
 
     public void RomperObjeto()
     {
+        if (yaSeRompio) return;
         yaSeRompio = true;
+        
+        if (!string.IsNullOrEmpty(idUnicoObjeto) && GameManager.Instance != null)
+        {
+            GameManager.Instance.RegistrarPuzzleCompletado(idUnicoObjeto);
+        }
+        
         if (cuentaComoObjetivoNivel && LevelProgressManager.Instance != null)
         {
             LevelProgressManager.Instance.RegistrarPuzzleResuelto();
         }
-
+        
         if (sonidoRuptura != null)
         {
             AudioSource.PlayClipAtPoint(sonidoRuptura, transform.position, volumenSonido);
         }
-
+        
         if (prefabObjetoRoto != null)
         {
             Instantiate(prefabObjetoRoto, transform.position, transform.rotation);

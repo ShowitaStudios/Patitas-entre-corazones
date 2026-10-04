@@ -13,6 +13,31 @@ public class ObjetoPuzzle : MonoBehaviour
     [SerializeField] private float raycastHeightOffset = 0.3f;
     [SerializeField] private LayerMask playerLayer;
 
+    private void Awake()
+    {
+        if (puzzleManager == null)
+        {
+            BuscarYAsignarPuzzleManager();
+        }
+    }
+    private void Reset()
+    {
+        BuscarYAsignarPuzzleManager();
+    }
+    public void BuscarYAsignarPuzzleManager()
+    {
+#if UNITY_2023_1_OR_NEWER
+        puzzleManager = Object.FindFirstObjectByType<PuzzleManager>();
+#else
+        puzzleManager = Object.FindObjectOfType<PuzzleManager>();
+#endif
+
+        if (puzzleManager == null)
+        {
+            Debug.LogWarning($"[ObjetoPuzzle] No se encontró ningún PuzzleManager en la escena para '{gameObject.name}'.", this);
+        }
+    }
+
     private void Update()
     {
         if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
