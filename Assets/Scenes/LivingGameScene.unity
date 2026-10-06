@@ -1403,6 +1403,7 @@ GameObject:
   - component: {fileID: 495097500}
   - component: {fileID: 495097499}
   - component: {fileID: 495097498}
+  - component: {fileID: 495097505}
   m_Layer: 7
   m_Name: Mascota
   m_TagString: Player
@@ -1559,6 +1560,20 @@ Transform:
   - {fileID: 1150783480}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495097505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495097497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &539950668
 GameObject:
   m_ObjectHideFlags: 0
@@ -5435,8 +5450,7 @@ MonoBehaviour:
   idUnicoObjeto: VasoRoto
   cuentaComoObjetivoNivel: 1
   prefabObjetoRoto: {fileID: 919132149155446097, guid: 61937f580adaa1a4f99ee47445605a11, type: 3}
-  sonidoRuptura: {fileID: 0}
-  volumenSonido: 1
+  sonidoRuptura: {fileID: 1446189610}
 --- !u!54 &1446189604
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5517,6 +5531,37 @@ MonoBehaviour:
   alEstarCompletado:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1446189610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446189601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1721088240
+      Data2: 1250069284
+      Data3: 1409654914
+      Data4: -596743229
+    Path: event:/SFX/Puzzles/Cocina/VasoRoto
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1459486635
 GameObject:
   m_ObjectHideFlags: 0
@@ -7748,6 +7793,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1446189608}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1446189610}
   m_SourcePrefab: {fileID: 100100000, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
 --- !u!1 &1947230103
 GameObject:

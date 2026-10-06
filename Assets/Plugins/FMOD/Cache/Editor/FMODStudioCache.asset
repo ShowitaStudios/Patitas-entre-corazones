@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639262298078204038
+  lastModified: 639269036985100080
   FileSizes:
   - Name: Desktop
-    Value: 762
+    Value: 832
   Exists: 1
 --- !u!114 &-7053873700277498828
 MonoBehaviour:
@@ -62,10 +62,10 @@ MonoBehaviour:
   Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639262298078172793
+  lastModified: 639269036985075887
   FileSizes:
   - Name: Desktop
-    Value: 2172000
+    Value: 2184544
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -84,10 +84,38 @@ MonoBehaviour:
   - {fileID: -5252988560514230129}
   EditorEvents:
   - {fileID: -7053873700277498828}
+  - {fileID: 4309426002210173032}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5252988560514230129}
   StringsBanks:
   - {fileID: -7219707206531385377}
-  cacheTime: 639262298078204038
+  cacheTime: 639269036985100080
   cacheVersion: 131637
+--- !u!114 &4309426002210173032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/Cocina/VasoRoto
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/Cocina/VasoRoto
+  Guid:
+    Data1: 1721088240
+    Data2: 1250069284
+    Data3: 1409654914
+    Data4: -596743229
+  Banks:
+  - {fileID: -5252988560514230129}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
