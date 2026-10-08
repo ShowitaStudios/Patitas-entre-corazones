@@ -1,4 +1,6 @@
 using UnityEngine;
+using FMODUnity;
+//libreria del fmod
 
 [RequireComponent(typeof(Rigidbody))]
 public class ObjetoRompible : MonoBehaviour
@@ -17,8 +19,8 @@ public class ObjetoRompible : MonoBehaviour
 
     [Header("Efectos al Romperse")]
     [SerializeField] private GameObject prefabObjetoRoto;
-    [SerializeField] private AudioClip sonidoRuptura;
-    [SerializeField] private float volumenSonido = 1.0f;
+    //Asi va la variable para el sonido
+    [SerializeField] private StudioEventEmitter sonidoRuptura;
 
     private Rigidbody rb;
     private bool yaSeRompio = false;
@@ -63,10 +65,10 @@ public class ObjetoRompible : MonoBehaviour
         {
             LevelProgressManager.Instance.RegistrarPuzzleResuelto();
         }
-        
+        //Así va el sonido de ruptura
         if (sonidoRuptura != null)
         {
-            AudioSource.PlayClipAtPoint(sonidoRuptura, transform.position, volumenSonido);
+            sonidoRuptura.Play();
         }
         
         if (prefabObjetoRoto != null)
