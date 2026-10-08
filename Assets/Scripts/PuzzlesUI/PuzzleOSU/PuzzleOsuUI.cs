@@ -13,7 +13,7 @@ public class PuzzleOsuUI : MonoBehaviour
 
     [Header("Configuración del Puzzle Osu")]
     [SerializeField] private GameObject prefabCirculoOsu;
-    [SerializeField] private RectTransform areaAparicion; // El Panel donde aparecerán los círculos
+    [SerializeField] private RectTransform areaAparicion;
     [SerializeField] private int aciertosRequeridos = 10;
     [SerializeField] private float tiempoEntreCirculos = 0.8f;
     [SerializeField] private float duracionCirculo = 1.8f;
@@ -23,6 +23,10 @@ public class PuzzleOsuUI : MonoBehaviour
 
     [Header("Eventos")]
     [SerializeField] private UnityEvent alCompletarPuzzle;
+    // Referencias para los eventos de audio del puzzle Osu, aqui tienes que poner tal cual pero sin los slash para crear las referencias para eventos del Fmod, saludos nato si rompes algo te mato
+    // [SerializeField] private FMODUnity.EventReference eventoAciertoFMOD;
+    // [SerializeField] private FMODUnity.EventReference eventoFalloFMOD;
+    // [SerializeField] private FMODUnity.EventReference eventoVictoriaFMOD;
 
     private int aciertosActuales = 0;
     private bool yaCompletado = false;
@@ -42,7 +46,6 @@ public class PuzzleOsuUI : MonoBehaviour
 
     private void Start()
     {
-        // Verificar persistencia si ya fue resuelto en el GameManager
         if (!string.IsNullOrEmpty(idUnicoPuzzle) && GameManager.Instance != null)
         {
             if (GameManager.Instance.EsPuzzleCompletado(idUnicoPuzzle))
@@ -52,7 +55,6 @@ public class PuzzleOsuUI : MonoBehaviour
             }
         }
     }
-
     private void OnEnable()
     {
         if (!yaCompletado)
@@ -61,7 +63,6 @@ public class PuzzleOsuUI : MonoBehaviour
             rutinaGenerador = StartCoroutine(GenerarCirculos());
         }
     }
-
     private void OnDisable()
     {
         if (rutinaGenerador != null)
@@ -70,7 +71,6 @@ public class PuzzleOsuUI : MonoBehaviour
         }
         LimpiarCirculosRestantes();
     }
-
     private IEnumerator GenerarCirculos()
     {
         while (aciertosActuales < aciertosRequeridos && !yaCompletado)
@@ -79,7 +79,6 @@ public class PuzzleOsuUI : MonoBehaviour
             yield return new WaitForSeconds(tiempoEntreCirculos);
         }
     }
-
     private void CrearNuevoCirculo()
     {
         if (prefabCirculoOsu == null || areaAparicion == null) return;
@@ -89,7 +88,6 @@ public class PuzzleOsuUI : MonoBehaviour
 
         if (rect != null)
         {
-            // Generar posición aleatoria dentro del área asignada
             float xRandom = Random.Range(-areaAparicion.rect.width / 2f + 50f, areaAparicion.rect.width / 2f - 50f);
             float yRandom = Random.Range(-areaAparicion.rect.height / 2f + 50f, areaAparicion.rect.height / 2f - 50f);
             rect.anchoredPosition = new Vector2(xRandom, yRandom);
@@ -101,22 +99,22 @@ public class PuzzleOsuUI : MonoBehaviour
             componenteCirculo.Inicializar(this, duracionCirculo);
         }
     }
-
     public void RegistrarAcierto()
     {
         if (yaCompletado) return;
 
         aciertosActuales++;
+        // Aca pones lo mismo , copias el codigo que te deje abajito y se crea el evento, un saludo natanael
+        // FMODUnity.RuntimeManager.PlayOneShot(eventoAciertoFMOD);
 
         if (aciertosActuales >= aciertosRequeridos)
         {
             CompletarPuzzle();
         }
     }
-
     public void RegistrarFallo()
     {
-        // Puedes agregar lógica aquí si quieres restar puntos o reiniciar el contador al fallar
+        // Aqui puedo meter weas por si pierde el player, no olvidar att sehita
     }
 
     private void CompletarPuzzle()
@@ -125,24 +123,23 @@ public class PuzzleOsuUI : MonoBehaviour
 
         if (rutinaGenerador != null) StopCoroutine(rutinaGenerador);
         LimpiarCirculosRestantes();
-
-        // Registrar en GameManager
+        
+        //Lo mismo de antes, copias el codigo sin las barritas y se crea el evento.
+        // FMODUnity.RuntimeManager.PlayOneShot(eventoVictoriaFMOD);
+        
         if (!string.IsNullOrEmpty(idUnicoPuzzle) && GameManager.Instance != null)
         {
             GameManager.Instance.RegistrarPuzzleCompletado(idUnicoPuzzle);
         }
-
-        // Registrar en LevelProgressManager
+        
         if (cuentaComoObjetivoNivel && LevelProgressManager.Instance != null)
         {
             LevelProgressManager.Instance.RegistrarPuzzleResuelto();
         }
 
         alCompletarPuzzle?.Invoke();
-
         StartCoroutine(CerrarConRetraso());
     }
-
     private void LimpiarCirculosRestantes()
     {
         foreach (Transform child in areaAparicion)
@@ -150,7 +147,6 @@ public class PuzzleOsuUI : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
-
     private IEnumerator CerrarConRetraso()
     {
         yield return new WaitForSeconds(1.0f);

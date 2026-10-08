@@ -22,6 +22,10 @@ public class RompecabezasUI : MonoBehaviour
     [Header("Eventos")]
     [Tooltip("Acciones que suceden cuando el puzzle se completa")]
     [SerializeField] private UnityEvent alCompletarPuzzle;
+    
+    // Aca lo mismo natito, copias las lineas de codigo sin las barritas y se crean las referencias de los sonidos, un abrazo.
+    // [SerializeField] private FMODUnity.EventReference sonidoPiezaEncajadaFMOD;
+    // [SerializeField] private FMODUnity.EventReference sonidoPuzzleResueltoFMOD;
 
     private int piezasCorrectas = 0;
     private bool yaCompletado = false;
@@ -49,6 +53,9 @@ public class RompecabezasUI : MonoBehaviour
         if (yaCompletado) return;
 
         piezasCorrectas++;
+        
+        //Ya le sabes, borras las barritas y se crea el evento, un beso...
+        // FMODUnity.RuntimeManager.PlayOneShot(sonidoPiezaEncajadaFMOD);
 
         if (piezasCorrectas >= totalPiezas)
         {
@@ -58,6 +65,10 @@ public class RompecabezasUI : MonoBehaviour
     private void CompletarPuzzle()
     {
         yaCompletado = true;
+        
+        //Lo mismo de arriba, te mando otro beso...
+        // FMODUnity.RuntimeManager.PlayOneShot(sonidoPuzzleResueltoFMOD);
+        
         if (!string.IsNullOrEmpty(idUnicoPuzzle) && GameManager.Instance != null)
         {
             GameManager.Instance.RegistrarPuzzleCompletado(idUnicoPuzzle);
