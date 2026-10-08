@@ -1,25 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7219707206531385377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639262298078204038
-  FileSizes:
-  - Name: Desktop
-    Value: 762
-  Exists: 1
 --- !u!114 &-7053873700277498828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +19,7 @@ MonoBehaviour:
     Data3: -308092538
     Data4: 1404507764
   Banks:
-  - {fileID: -5252988560514230129}
+  - {fileID: -1962502288294457951}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -47,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 166818
---- !u!114 &-5252988560514230129
+--- !u!114 &-1962502288294457951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,13 +39,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
+  Path: ../../LeoBack/TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639262298078172793
+  lastModified: 639268046037629072
   FileSizes:
   - Name: Desktop
     Value: 2172000
+  Exists: 1
+--- !u!114 &-788680370927318081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../LeoBack/TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639268046037639045
+  FileSizes:
+  - Name: Desktop
+    Value: 762
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -80,14 +80,14 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: -7219707206531385377}
-  - {fileID: -5252988560514230129}
+  - {fileID: -788680370927318081}
+  - {fileID: -1962502288294457951}
   EditorEvents:
   - {fileID: -7053873700277498828}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5252988560514230129}
+  - {fileID: -1962502288294457951}
   StringsBanks:
-  - {fileID: -7219707206531385377}
-  cacheTime: 639262298078204038
+  - {fileID: -788680370927318081}
+  cacheTime: 639268046037639045
   cacheVersion: 131637

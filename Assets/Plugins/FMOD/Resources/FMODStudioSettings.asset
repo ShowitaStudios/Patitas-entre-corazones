@@ -307,8 +307,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/PtituloFMOD.fspro
-  sourceBankPath: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build
+  sourceProjectPath: ../../LeoBack/TituloFMOD/PtituloFMOD/PtituloFMOD.fspro
+  sourceBankPath: ../../LeoBack/TituloFMOD/PtituloFMOD/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -347,18 +347,18 @@ MonoBehaviour:
   HideSetupWizard: 0
   LastEventReferenceScanVersion: 131637
   Platforms:
-  - {fileID: 710825576561097644}
-  - {fileID: 5389010032000309722}
-  - {fileID: 2511773824199107846}
-  - {fileID: 2170488575867612198}
-  - {fileID: -8811704013646248550}
-  - {fileID: 2069591769835903357}
-  - {fileID: 2461830910311857476}
-  - {fileID: 3262146214591769849}
-  - {fileID: -5658440298046908962}
-  - {fileID: 8138163285117352251}
-  - {fileID: -7650317054515952546}
   - {fileID: -9079270175662864034}
+  - {fileID: -8811704013646248550}
+  - {fileID: -7650317054515952546}
+  - {fileID: -5658440298046908962}
+  - {fileID: 710825576561097644}
+  - {fileID: 2069591769835903357}
+  - {fileID: 2170488575867612198}
+  - {fileID: 2461830910311857476}
+  - {fileID: 2511773824199107846}
+  - {fileID: 3262146214591769849}
+  - {fileID: 5389010032000309722}
+  - {fileID: 8138163285117352251}
   MigratedPlatforms: 0500000000000000060000000a0000000800000009000000120000000c000000150000000b0000000200000001000000
 --- !u!114 &710825576561097644
 MonoBehaviour:
@@ -868,16 +868,16 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - 0f8eb3f400726694eb47beb1a9f94ce8
-  - 46fbfdf3fc43db0458918377fd40293e
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - 52eb9df5db46521439908db3a29a1bbb
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - b7716510a1f36934c87976f3a81dbf3d
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - de700ef3f37a49b58a57ae3addf01ad9
   - fd7c55dab0fce234b8c25f6ffca523c1
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - de700ef3f37a49b58a57ae3addf01ad9
+  - b7716510a1f36934c87976f3a81dbf3d
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 46fbfdf3fc43db0458918377fd40293e
+  - 52eb9df5db46521439908db3a29a1bbb
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  - 2c5177b11d81d824dbb064f9ac8527da
+  - c88d16e5272a4e241b0ef0ac2e53b73d
   codecChannels:
     Value: []
     HasValue: 0
