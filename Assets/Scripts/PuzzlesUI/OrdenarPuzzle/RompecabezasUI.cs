@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using FMODUnity;
 
 public class RompecabezasUI : MonoBehaviour
 {
@@ -22,7 +23,11 @@ public class RompecabezasUI : MonoBehaviour
     [Header("Eventos")]
     [Tooltip("Acciones que suceden cuando el puzzle se completa")]
     [SerializeField] private UnityEvent alCompletarPuzzle;
-    
+
+    [Header("Sonidos")]
+    [SerializeField] private StudioEventEmitter sonidoPiezaEncajada;
+    [SerializeField] private StudioEventEmitter sonidoPiezaTomar;
+
     // Aca lo mismo natito, copias las lineas de codigo sin las barritas y se crean las referencias de los sonidos, un abrazo.
     // [SerializeField] private FMODUnity.EventReference sonidoPiezaEncajadaFMOD;
     // [SerializeField] private FMODUnity.EventReference sonidoPuzzleResueltoFMOD;
@@ -55,7 +60,7 @@ public class RompecabezasUI : MonoBehaviour
         piezasCorrectas++;
         
         //Ya le sabes, borras las barritas y se crea el evento, un beso...
-        // FMODUnity.RuntimeManager.PlayOneShot(sonidoPiezaEncajadaFMOD);
+         sonidoPiezaEncajada?.Play();   
 
         if (piezasCorrectas >= totalPiezas)
         {
