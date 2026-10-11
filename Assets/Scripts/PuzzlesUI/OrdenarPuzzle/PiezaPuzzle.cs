@@ -23,7 +23,7 @@ public class PiezaPuzzle : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         }
         posicionInicial = rectTransform.anchoredPosition;
     }
-
+    //Sonidos aqui, natito, para que suene cuando se toma la pieza, un abarso.
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (estaEncajada) return;
