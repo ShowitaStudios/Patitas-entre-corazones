@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639274194477985640
+  lastModified: 639274343708199721
   FileSizes:
   - Name: Desktop
-    Value: 1184
+    Value: 1234
   Exists: 1
 --- !u!114 &-8075452254217134053
 MonoBehaviour:
@@ -46,7 +46,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 420
 --- !u!114 &-3158800761768353792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,10 +89,10 @@ MonoBehaviour:
   Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639274194477954932
+  lastModified: 639274343708169141
   FileSizes:
   - Name: Desktop
-    Value: 1003680
+    Value: 1985376
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -118,12 +118,13 @@ MonoBehaviour:
   - {fileID: 2004102805944814246}
   - {fileID: -8075452254217134053}
   - {fileID: 2460226343335136299}
+  - {fileID: 3166674926886811112}
   EditorParameters: []
   MasterBanks:
   - {fileID: -638590567233231615}
   StringsBanks:
   - {fileID: -8594953161804401455}
-  cacheTime: 639274194477985640
+  cacheTime: 639274343708199721
   cacheVersion: 131637
 --- !u!114 &107212715419614411
 MonoBehaviour:
@@ -231,6 +232,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3166674926886811112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/OST/OSTIra
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/OST/OSTIra
+  Guid:
+    Data1: -1080696975
+    Data2: 1205825208
+    Data3: 1072074370
+    Data4: -1315486175
+  Banks:
+  - {fileID: -638590567233231615}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 78481
 --- !u!114 &3897044480893937597
 MonoBehaviour:
   m_ObjectHideFlags: 0
