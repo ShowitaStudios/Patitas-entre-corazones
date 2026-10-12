@@ -25,8 +25,9 @@ public class RompecabezasUI : MonoBehaviour
     [SerializeField] private UnityEvent alCompletarPuzzle;
 
     [Header("Sonidos")]
-    [SerializeField] private StudioEventEmitter sonidoPiezaEncajada;
-    [SerializeField] private StudioEventEmitter sonidoPiezaTomar;
+    //[SerializeField] private StudioEventEmitter sonidoPiezaEncajada;
+    //[SerializeField] private StudioEventEmitter sonidoPiezaTomar;
+    [SerializeField] private StudioEventEmitter sonidoPuzzleResuelto;
 
     // Aca lo mismo natito, copias las lineas de codigo sin las barritas y se crean las referencias de los sonidos, un abrazo.
     // [SerializeField] private FMODUnity.EventReference sonidoPiezaEncajadaFMOD;
@@ -60,11 +61,12 @@ public class RompecabezasUI : MonoBehaviour
         piezasCorrectas++;
         
         //Ya le sabes, borras las barritas y se crea el evento, un beso...
-         sonidoPiezaEncajada?.Play();   
+         //sonidoPiezaEncajada.Play();   
 
         if (piezasCorrectas >= totalPiezas)
         {
             CompletarPuzzle();
+            sonidoPuzzleResuelto?.Play();   
         }
     }
     private void CompletarPuzzle()

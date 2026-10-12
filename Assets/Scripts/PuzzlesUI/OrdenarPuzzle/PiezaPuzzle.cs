@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using FMODUnity;    
 
 public class PiezaPuzzle : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -7,6 +8,11 @@ public class PiezaPuzzle : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     [SerializeField] private RectTransform encajeTarget;
     [SerializeField] private float toleranciaEncaje = 30f;
     [SerializeField] private RompecabezasUI controladorRompecabezas;
+
+    [Header("Sonidos")]
+    [SerializeField] private StudioEventEmitter sonidoTomar;
+    [SerializeField] private StudioEventEmitter sonidoDejar;
+    [SerializeField] private StudioEventEmitter sonidoEncajar;
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -30,6 +36,7 @@ public class PiezaPuzzle : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f;
+        sonidoTomar.Play();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -45,6 +52,7 @@ public class PiezaPuzzle : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
+        //sonidoDejar.Play();
 
         float distancia = Vector2.Distance(rectTransform.anchoredPosition, encajeTarget.anchoredPosition);
 
@@ -56,11 +64,13 @@ public class PiezaPuzzle : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             if (controladorRompecabezas != null)
             {
                 controladorRompecabezas.PiezaEncajada();
+                sonidoEncajar.Play();
             }
         }
         else
         {
             rectTransform.anchoredPosition = posicionInicial;
+            sonidoDejar.Play();
         }
     }
 }
