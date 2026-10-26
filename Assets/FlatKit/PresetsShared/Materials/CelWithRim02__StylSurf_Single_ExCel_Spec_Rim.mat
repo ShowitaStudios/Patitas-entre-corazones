@@ -51,6 +51,6 @@ Material:
     m_Colors:
     - _ColorDim: {r: 0.58431375, g: 0.031372547, b: 0.34925458, a: 1}
     - _ColorDimExtra: {r: 0.18434358, g: 0.06697223, b: 0.3301887, a: 1}
-    - _FlatSpecularColor: {r: 1, g: 0.58997333, b: 0.10849059, a: 1}
+    - _FlatSpecularColor: {r: 1, g: 0.109803915, b: 0.127604, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

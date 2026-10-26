@@ -106,10 +106,10 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FlatRimAmount: 0.5
-    - _FlatRimEdgeSmoothness: 0
+    - _FlatRimEdgeSmoothness: 0.602
     - _FlatRimEnabled: 1
-    - _FlatRimLightAlign: 0.424
-    - _FlatRimSize: 0.69
+    - _FlatRimLightAlign: 0.146
+    - _FlatRimSize: 1
     - _FlatShadowsEnabled: 1
     - _FlatSmoothness: 0.362
     - _FlatSpecularEdgeSmoothness: 1
@@ -150,10 +150,10 @@ Material:
     - _RimEnabled: 1
     - _SecondaryColor: 1
     - _SecondaryColorEnabled: 1
-    - _SelfShadingSize: 0.722
-    - _SelfShadingSizeExtra: 0.377
-    - _ShadowEdgeSize: 0.434
-    - _ShadowEdgeSizeExtra: 0.301
+    - _SelfShadingSize: 0.398
+    - _SelfShadingSizeExtra: 1
+    - _ShadowEdgeSize: 0.335
+    - _ShadowEdgeSizeExtra: 0.092
     - _ShadowEdgeSmoothness: 0.071
     - _ShadowFalloff: 0.01
     - _SmoothnessTextureChannel: 0

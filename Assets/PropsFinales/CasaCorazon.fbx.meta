@@ -71,8 +71,8 @@ ModelImporter:
     useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
-    normalSmoothAngle: 76
-    normalImportMode: 0
+    normalSmoothAngle: 36
+    normalImportMode: 1
     tangentImportMode: 1
     normalCalculationMode: 3
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
