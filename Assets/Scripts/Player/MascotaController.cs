@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 [RequireComponent(typeof(CharacterController))]
 public class MascotaController : MonoBehaviour
@@ -41,6 +42,8 @@ public class MascotaController : MonoBehaviour
     private float dashCooldownTimer = 0f;
     private Vector3 dashDirection;
     private bool saliendoDeDash = false;
+
+    [SerializeField] StudioEventEmitter playerJumpSfx;
 
     private void Start()
     {
@@ -179,6 +182,8 @@ public class MascotaController : MonoBehaviour
                 cargandoSalto = false;
                 float porcentajeCarga = tiempoCargaSalto / tiempoMaxCargaSalto;
                 float alturaSaltoActual = Mathf.Lerp(jumpHeight, maxJumpHeight, porcentajeCarga);
+                playerJumpSfx.Play();
+                //SFX
 
                 verticalVelocity.y = Mathf.Sqrt(alturaSaltoActual * -2f * gravity);
 

@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8419845501377716100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639292410796194765
+  FileSizes:
+  - Name: Desktop
+    Value: 1452
+  Exists: 1
 --- !u!114 &-8075452254217134053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,7 +39,7 @@ MonoBehaviour:
     Data3: 2144008339
     Data4: 320227015
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -46,7 +66,7 @@ MonoBehaviour:
     Data3: 1409654914
     Data4: -596743229
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -54,6 +74,107 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &-2939791690887714977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PlayerSFX/PlayerJump
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/PlayerSFX/PlayerJump
+  Guid:
+    Data1: 1009980282
+    Data2: 1110773039
+    Data3: -334522236
+    Data4: -2084432508
+  Banks:
+  - {fileID: -1518190111043597001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 240
+--- !u!114 &-2795940656406925595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/StartButton
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/UI/StartButton
+  Guid:
+    Data1: 1982357610
+    Data2: 1221524553
+    Data3: 3849653
+    Data4: 728758914
+  Banks:
+  - {fileID: -1518190111043597001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 392
+--- !u!114 &-1954481194985825975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/ExitButton
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/UI/ExitButton
+  Guid:
+    Data1: 1090519670
+    Data2: 1101799357
+    Data3: 567198655
+    Data4: 1191301775
+  Banks:
+  - {fileID: -1518190111043597001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 840
+--- !u!114 &-1518190111043597001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639292410796159838
+  FileSizes:
+  - Name: Desktop
+    Value: 2240128
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,8 +188,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: 4861334346930644683}
-  - {fileID: 8560245271754187651}
+  - {fileID: -8419845501377716100}
+  - {fileID: -1518190111043597001}
   EditorEvents:
   - {fileID: 3897044480893937597}
   - {fileID: 107212715419614411}
@@ -79,12 +200,16 @@ MonoBehaviour:
   - {fileID: -8075452254217134053}
   - {fileID: 2460226343335136299}
   - {fileID: 3166674926886811112}
+  - {fileID: -2795940656406925595}
+  - {fileID: -1954481194985825975}
+  - {fileID: -2939791690887714977}
+  - {fileID: 8842098076428969883}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   StringsBanks:
-  - {fileID: 4861334346930644683}
-  cacheTime: 639274386947440678
+  - {fileID: -8419845501377716100}
+  cacheTime: 639292410796194765
   cacheVersion: 131637
 --- !u!114 &107212715419614411
 MonoBehaviour:
@@ -105,7 +230,7 @@ MonoBehaviour:
     Data3: 1849080717
     Data4: 1229839112
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -132,7 +257,7 @@ MonoBehaviour:
     Data3: -2097446733
     Data4: -1597163050
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -159,7 +284,7 @@ MonoBehaviour:
     Data3: 1714297501
     Data4: 753143564
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -211,7 +336,7 @@ MonoBehaviour:
     Data3: 1072074370
     Data4: -1315486175
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -238,14 +363,14 @@ MonoBehaviour:
     Data3: -308092538
     Data4: 1404507764
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 72000
+  Length: 88000
 --- !u!114 &4451640784158186469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +390,7 @@ MonoBehaviour:
     Data3: -2004599906
     Data4: 2036004857
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -273,26 +398,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &4861334346930644683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: ../../TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639274386947440678
-  FileSizes:
-  - Name: Desktop
-    Value: 1234
-  Exists: 1
 --- !u!114 &5230419482213842980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +417,7 @@ MonoBehaviour:
     Data3: -1573913947
     Data4: 732816218
   Banks:
-  - {fileID: 8560245271754187651}
+  - {fileID: -1518190111043597001}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -320,7 +425,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 60
---- !u!114 &8560245271754187651
+--- !u!114 &8842098076428969883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,14 +434,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: ../../TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639274386947440678
-  FileSizes:
-  - Name: Desktop
-    Value: 1985376
-  Exists: 1
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PlayerSFX/PlayerDash
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/PlayerSFX/PlayerDash
+  Guid:
+    Data1: 2026138833
+    Data2: 1292670521
+    Data3: 1118708132
+    Data4: 813220852
+  Banks:
+  - {fileID: -1518190111043597001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 252

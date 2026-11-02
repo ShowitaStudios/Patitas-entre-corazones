@@ -3950,6 +3950,7 @@ GameObject:
   - component: {fileID: 495097499}
   - component: {fileID: 495097498}
   - component: {fileID: 495097505}
+  - component: {fileID: 495097507}
   m_Layer: 7
   m_Name: Mascota
   m_TagString: Player
@@ -4003,6 +4004,7 @@ MonoBehaviour:
   gravedadFlote: -30
   groundFriction: 10
   airFriction: 2.5
+  playerJumpSfx: {fileID: 495097507}
 --- !u!143 &495097500
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4128,6 +4130,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.88, z: 1.65}
   m_Center: {x: 0, y: 0.09, z: 0.25}
+--- !u!114 &495097507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495097497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1009980282
+      Data2: 1110773039
+      Data3: -334522236
+      Data4: -2084432508
+    Path: event:/SFX/PlayerSFX/PlayerJump
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &502401815
 GameObject:
   m_ObjectHideFlags: 0
@@ -12401,9 +12434,9 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10.18
+  OverrideMaxDistance: 33.71
 --- !u!1 &1446832458
 GameObject:
   m_ObjectHideFlags: 0
