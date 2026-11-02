@@ -55,5 +55,6 @@ Material:
     - _ColorDimExtra: {r: 0.14946675, g: 0.08232467, b: 0.4716981, a: 1}
     - _FlatRimColor: {r: 1.009434, g: 2, b: 1.5317332, a: 1}
     - _FlatSpecularColor: {r: 0.109803915, g: 1, b: 0.55139935, a: 1}
+    - _OutlineColor: {r: 0.030644327, g: 0, b: 0.1509434, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -33,7 +33,7 @@ Material:
   disabledShaderPasses:
   - SRPDEFAULTUNLIT
   - Outline
-  m_LockedProperties: _RimEnabled
+  m_LockedProperties: _FlatRimColor _RimEnabled _SelfShadingSizeExtra
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
@@ -56,11 +56,11 @@ Material:
     - _ShadowEdgeSizeExtra: 0.197
     - _VertexExtrusionSmoothNormals: 0
     m_Colors:
-    - _BaseColor: {r: 0.27058828, g: 1, b: 0.31075433, a: 1}
-    - _ColorDim: {r: 0.2688679, g: 1, b: 0.39765653, a: 1}
-    - _ColorDimExtra: {r: 0.13118546, g: 0.41509432, b: 0.27139026, a: 1}
-    - _FlatRimColor: {r: 0, g: 2.670157, b: 0.4396699, a: 1}
-    - _FlatSpecularColor: {r: 0.109803915, g: 1, b: 0.55139935, a: 1}
+    - _BaseColor: {r: 0, g: 0.7872421, b: 0.8113208, a: 1}
+    - _ColorDim: {r: 0.6745283, g: 0.987758, b: 1, a: 1}
+    - _ColorDimExtra: {r: 0.043387324, g: 0.57976395, b: 0.6132076, a: 1}
+    - _FlatRimColor: {r: 0, g: 2.1361735, b: 4.208723, a: 1}
+    - _FlatSpecularColor: {r: 0.3254717, g: 1, b: 0.9301663, a: 1}
     - _OutlineColor: {r: 0, g: 1, b: 0.06589508, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

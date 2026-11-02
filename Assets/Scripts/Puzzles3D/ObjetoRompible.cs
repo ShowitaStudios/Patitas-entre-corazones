@@ -17,6 +17,10 @@ public class ObjetoRompible : MonoBehaviour
     [Tooltip("Marca esta casilla si romper este objeto cuenta como uno de los objetivos del nivel")]
     [SerializeField] private bool cuentaComoObjetivoNivel = false;
 
+    [Header("Zona de Puzzles (Opcional)")]
+    [Tooltip("Arrastra aquí el trigger de la zona a la que pertenece este objeto si quieres actualizar su contador visual")]
+    [SerializeField] private PuzzleZonaTrigger zonaTriggerAsociada;
+
     [Header("Efectos al Romperse")]
     [SerializeField] private GameObject prefabObjetoRoto;
     //Asi va la variable para el sonido
@@ -65,6 +69,13 @@ public class ObjetoRompible : MonoBehaviour
         {
             LevelProgressManager.Instance.RegistrarPuzzleResuelto();
         }
+
+        // Aquí conectamos con el trigger de zona, jefe:
+        if (zonaTriggerAsociada != null)
+        {
+            zonaTriggerAsociada.RegistrarPuzzleZona();
+        }
+
         //Así va el sonido de ruptura
         if (sonidoRuptura != null)
         {

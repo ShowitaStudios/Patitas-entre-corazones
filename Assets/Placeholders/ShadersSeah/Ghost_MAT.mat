@@ -55,7 +55,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 1
+    - _FresnelPower: 0.86
     - _InteriorSpread: 1.07
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -63,7 +63,7 @@ Material:
     - _WobbleFrequency: 2
     - _WobbleSpeed: 2
     m_Colors:
-    - _Color: {r: 0, g: 0.6641513, b: 1.4339623, a: 1}
+    - _Color: {r: 0.05039156, g: 0.40982956, b: 0.8217697, a: 1}
     - _InteriorColor: {r: 2.2690156, g: 0.438819, b: 1.6677152, a: 1}
     - _InteriorPosition: {r: 0, g: -0.52, b: -0.94, a: 0}
     - _Vector3: {r: -3, g: 0, b: 0, a: 0}

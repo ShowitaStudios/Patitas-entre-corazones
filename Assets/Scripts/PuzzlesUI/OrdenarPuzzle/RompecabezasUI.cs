@@ -20,6 +20,10 @@ public class RompecabezasUI : MonoBehaviour
     [Tooltip("Marca si completar este puzzle UI suma al progreso general del nivel")]
     [SerializeField] private bool cuentaComoObjetivoNivel = true;
 
+    [Header("Zona de Puzzles (Opcional)")]
+    [Tooltip("Arrastra aquí el trigger de la zona a la que pertenece este puzzle si quieres actualizar su contador visual")]
+    [SerializeField] private PuzzleZonaTrigger zonaTriggerAsociada;
+
     [Header("Eventos")]
     [Tooltip("Acciones que suceden cuando el puzzle se completa")]
     [SerializeField] private UnityEvent alCompletarPuzzle;
@@ -84,6 +88,13 @@ public class RompecabezasUI : MonoBehaviour
         {
             LevelProgressManager.Instance.RegistrarPuzzleResuelto();
         }
+
+        // Aquí conectamos con el trigger de zona que acabamos de armar, jefe:
+        if (zonaTriggerAsociada != null)
+        {
+            zonaTriggerAsociada.RegistrarPuzzleZona();
+        }
+
         alCompletarPuzzle?.Invoke();
         StartCoroutine(CerrarConRetraso());
     }
