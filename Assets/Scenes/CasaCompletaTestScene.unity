@@ -1678,11 +1678,11 @@ MonoBehaviour:
   CollisionTag: Player
   EventReference:
     Guid:
-      Data1: -1080696975
-      Data2: 1205825208
-      Data3: 1072074370
-      Data4: -1315486175
-    Path: event:/OST/OSTIra
+      Data1: -1047066967
+      Data2: 1196961225
+      Data3: 440588178
+      Data4: 902131600
+    Path: event:/OST/OST_Gameplay
   Event: 
   EventPlayTrigger: 3
   EventStopTrigger: 4
@@ -1728,7 +1728,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 8.52, y: 3.24, z: 8.01}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &172423825
 PrefabInstance:
