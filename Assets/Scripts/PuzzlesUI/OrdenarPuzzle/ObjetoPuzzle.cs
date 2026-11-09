@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class ObjetoPuzzle : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class ObjetoPuzzle : MonoBehaviour
     [Header("Feedback Visual (Shake)")]
     [SerializeField] private float shakeIntensity = 0.05f;
     [SerializeField] private float shakeSpeed = 40f;
+
+    [Header("sfx")]
+    [SerializeField] private StudioEventEmitter sfxOpenBox;
+    [SerializeField] private StudioEventEmitter sfxRascar;
 
     private int pulsacionesActuales = 0;
     private float tiempoUltimaPulsacion = 0f;
@@ -69,10 +74,11 @@ public class ObjetoPuzzle : MonoBehaviour
                 {
                     ResetearForcejeo();
                 }
-
+                // SFX de rascar aqui
                 if (Keyboard.current.eKey.wasPressedThisFrame)
                 {
                     EjecutarForcejeo();
+                    sfxRascar?.Play();
                 }
             }
             else
@@ -107,6 +113,7 @@ public class ObjetoPuzzle : MonoBehaviour
 
         if (pulsacionesActuales >= vecesNecesariasParaAbrir)
         {
+            sfxOpenBox?.Play();
             ResetearForcejeo();
             puzzleManager.AbrirPuzzlePorNombre(puzzleID);
         }

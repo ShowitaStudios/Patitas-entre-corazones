@@ -8121,6 +8121,8 @@ MonoBehaviour:
   tiempoMaxEntrePulsaciones: 1
   shakeIntensity: 0.05
   shakeSpeed: 40
+  sfxOpenBox: {fileID: 0}
+  sfxRascar: {fileID: 0}
 --- !u!23 &623776784 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
@@ -8822,6 +8824,8 @@ MonoBehaviour:
   tiempoMaxEntrePulsaciones: 1
   shakeIntensity: 0.05
   shakeSpeed: 40
+  sfxOpenBox: {fileID: 669239554}
+  sfxRascar: {fileID: 669239555}
 --- !u!23 &669239547 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
@@ -8889,6 +8893,68 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 3.0700302, z: 3.8846505}
   m_Center: {x: 0, y: 0.5350151, z: -0.0000019073486}
+--- !u!114 &669239554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669239545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1202768026
+      Data2: 1088849522
+      Data3: -1416228680
+      Data4: -1124632777
+    Path: event:/SFX/Puzzles/Puzzle_Caja_Abrir
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 5.1
+  OverrideMaxDistance: 16.13
+--- !u!114 &669239555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669239545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1740329030
+      Data2: 1306666441
+      Data3: 1854998699
+      Data4: -1847511114
+    Path: event:/SFX/Puzzles/RascarCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 3.15
+  OverrideMaxDistance: 16.2
 --- !u!1 &672604286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: 1d376a4da78abea4d874586e4b4736f0, type: 3}
@@ -10728,6 +10794,8 @@ MonoBehaviour:
   tiempoMaxEntrePulsaciones: 1
   shakeIntensity: 0.05
   shakeSpeed: 40
+  sfxOpenBox: {fileID: 0}
+  sfxRascar: {fileID: 0}
 --- !u!1 &847217991
 GameObject:
   m_ObjectHideFlags: 0
@@ -15505,6 +15573,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 669239551}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 669239554}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 669239555}
   m_SourcePrefab: {fileID: 100100000, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
 --- !u!1 &1295004973
 GameObject:
@@ -18960,6 +19034,8 @@ MonoBehaviour:
   tiempoMaxEntrePulsaciones: 1
   shakeIntensity: 0.05
   shakeSpeed: 40
+  sfxOpenBox: {fileID: 0}
+  sfxRascar: {fileID: 0}
 --- !u!1 &1531023715
 GameObject:
   m_ObjectHideFlags: 0
