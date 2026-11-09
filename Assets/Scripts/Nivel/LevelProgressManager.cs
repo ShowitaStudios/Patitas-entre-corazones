@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -5,10 +6,19 @@ using UnityEngine.Events;
 public class LevelProgressManager : MonoBehaviour
 {
     [System.Serializable]
+    public struct AccionSecuencial
+    {
+        [Tooltip("Tiempo de espera en segundos antes de ejecutar esta acción (desde que inició el hito o desde la acción anterior)")]
+        public float delayAntesDeAccion;
+        public UnityEvent eventoAccion;
+    }
+
+    [System.Serializable]
     public struct HitoProgreso
     {
         public int puzzlesObjetivo;
-        public UnityEvent eventoHito;
+        [Tooltip("Lista de eventos que se ejecutarán en secuencia con su propio delay")]
+        public List<AccionSecuencial> secuenciaAcciones;
         [HideInInspector] public bool yaEjecutado;
     }
 
@@ -69,14 +79,42 @@ public class LevelProgressManager : MonoBehaviour
             {
                 hito.yaEjecutado = true;
                 hitosNivel[i] = hito;
-                hito.eventoHito?.Invoke();
+
+                if (esCargaInicial)
+                {
+                    EjecutarSecuenciaInstantanea(hito.secuenciaAcciones);
+                }
+                else
+                {
+                    StartCoroutine(EjecutarSecuenciaConDelays(hito.secuenciaAcciones));
+                }
             }
             else if (puzzlesCompletados >= hito.puzzlesObjetivo && esCargaInicial && !hito.yaEjecutado)
             {
                 hito.yaEjecutado = true;
                 hitosNivel[i] = hito;
-                hito.eventoHito?.Invoke();
+                EjecutarSecuenciaInstantanea(hito.secuenciaAcciones);
             }
+        }
+    }
+
+    private IEnumerator EjecutarSecuenciaConDelays(List<AccionSecuencial> secuencia)
+    {
+        foreach (var accion in secuencia)
+        {
+            if (accion.delayAntesDeAccion > 0f)
+            {
+                yield return new WaitForSeconds(accion.delayAntesDeAccion);
+            }
+            accion.eventoAccion?.Invoke();
+        }
+    }
+
+    private void EjecutarSecuenciaInstantanea(List<AccionSecuencial> secuencia)
+    {
+        foreach (var accion in secuencia)
+        {
+            accion.eventoAccion?.Invoke();
         }
     }
 }

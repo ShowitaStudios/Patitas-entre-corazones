@@ -117,6 +117,11 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  usarForcejeo: 1
+  vecesNecesariasParaAbrir: 7
+  tiempoMaxEntrePulsaciones: 1
+  shakeIntensity: 0.07
+  shakeSpeed: 45
 --- !u!114 &6171845603525305694
 MonoBehaviour:
   m_ObjectHideFlags: 0
