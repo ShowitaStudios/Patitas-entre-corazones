@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9767af828ce58f4ea48cb8e89263b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
-  sceneToLoad: CasaCompletaTestScene
+  sceneToLoad: CinematicaScene
 --- !u!4 &914282436
 Transform:
   m_ObjectHideFlags: 0

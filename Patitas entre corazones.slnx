@@ -1,0 +1,11 @@
+﻿<Solution>
+  <Project Path="Unity.RenderPipelines.Universal.Runtime.csproj" />
+  <Project Path="FMODUnityEditor.csproj" />
+  <Project Path="FlatKit.Utils.Editor.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="ExternAttributes.Editor.csproj" />
+  <Project Path="FMODUnityResonanceEditor.csproj" />
+  <Project Path="FMODUnity.csproj" />
+  <Project Path="FMODUnityResonance.csproj" />
+</Solution>
