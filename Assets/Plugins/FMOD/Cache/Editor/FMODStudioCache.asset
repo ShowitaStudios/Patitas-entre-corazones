@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8075452254217134053
+--- !u!114 &-7262365019153955894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,24 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Puzzles/Cocina/PickObjetoCaja
+  m_Name: event:/SFX/Puzzles/DropObjetoCaja
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Puzzles/Cocina/PickObjetoCaja
+  Path: event:/SFX/Puzzles/DropObjetoCaja
   Guid:
-    Data1: 402121528
-    Data2: 1114029671
-    Data3: 2144008339
-    Data4: 320227015
+    Data1: -1711555948
+    Data2: 1172570936
+    Data3: 1714297501
+    Data4: 753143564
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6082680694401160538}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7033103176688641344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/Postit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/Postit
+  Guid:
+    Data1: -1565272488
+    Data2: 1126331303
+    Data3: -1236911214
+    Data4: 1755460996
+  Banks:
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 420
---- !u!114 &-3158800761768353792
+  Length: 2000
+--- !u!114 &-6868520231749777281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,23 +65,117 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Puzzles/Cocina/VasoRoto
+  m_Name: event:/SFX/Puzzles/OsuFallo
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Puzzles/Cocina/VasoRoto
+  Path: event:/SFX/Puzzles/OsuFallo
   Guid:
-    Data1: 1721088240
-    Data2: 1250069284
-    Data3: 1409654914
-    Data4: -596743229
+    Data1: -559470385
+    Data2: 1173768971
+    Data3: 1753096633
+    Data4: -1198511
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1000
+  Length: 2020
+--- !u!114 &-6379435346940795993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639303851168343515
+  FileSizes:
+  - Name: Desktop
+    Value: 3153280
+  Exists: 1
+--- !u!114 &-4939701356717826456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/OsuPuzzle
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/OsuPuzzle
+  Guid:
+    Data1: 1866486234
+    Data2: 1080266826
+    Data3: -496512359
+    Data4: 2006798136
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 886
+--- !u!114 &-4771230914955339679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639303851168383323
+  FileSizes:
+  - Name: Desktop
+    Value: 1946
+  Exists: 1
+--- !u!114 &-4343503870443935787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PlayerSFX/SoltarCaja
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/PlayerSFX/SoltarCaja
+  Guid:
+    Data1: -341962044
+    Data2: 1260593412
+    Data3: -1243800681
+    Data4: -959734848
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 137
 --- !u!114 &-2939791690887714977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +195,7 @@ MonoBehaviour:
     Data3: -334522236
     Data4: -2084432508
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -100,7 +222,7 @@ MonoBehaviour:
     Data3: 3849653
     Data4: 728758914
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -127,7 +249,7 @@ MonoBehaviour:
     Data3: 440588178
     Data4: 902131600
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -154,7 +276,7 @@ MonoBehaviour:
     Data3: 1854998699
     Data4: -1847511114
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -181,7 +303,7 @@ MonoBehaviour:
     Data3: 567198655
     Data4: 1191301775
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -189,7 +311,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 840
---- !u!114 &-488894048771590256
+--- !u!114 &-1846716767695174153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,17 +320,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: ../../TituloFMOD/PtituloFMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639298579581385504
-  FileSizes:
-  - Name: Desktop
-    Value: 2954304
-  Exists: 1
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/FotoColocar
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/FotoColocar
+  Guid:
+    Data1: 699211734
+    Data2: 1188706359
+    Data3: -2004599906
+    Data4: 2036004857
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-393649984635786333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +357,7 @@ MonoBehaviour:
     Data3: -1416228680
     Data4: -1124632777
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -249,17 +378,10 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: 6700815816653573500}
-  - {fileID: -488894048771590256}
+  - {fileID: -4771230914955339679}
+  - {fileID: -6379435346940795993}
   EditorEvents:
   - {fileID: 3897044480893937597}
-  - {fileID: 107212715419614411}
-  - {fileID: -3158800761768353792}
-  - {fileID: 4451640784158186469}
-  - {fileID: 5230419482213842980}
-  - {fileID: 2004102805944814246}
-  - {fileID: -8075452254217134053}
-  - {fileID: 2460226343335136299}
   - {fileID: 3166674926886811112}
   - {fileID: -2795940656406925595}
   - {fileID: -1954481194985825975}
@@ -268,14 +390,29 @@ MonoBehaviour:
   - {fileID: -2198220116180396424}
   - {fileID: -393649984635786333}
   - {fileID: -2181483021295986184}
+  - {fileID: 3992009237326082215}
+  - {fileID: 8793848724103837610}
+  - {fileID: -7262365019153955894}
+  - {fileID: 5506105617274802805}
+  - {fileID: 5229697968284621458}
+  - {fileID: 5142922763262519620}
+  - {fileID: 7799716089733484826}
+  - {fileID: -1846716767695174153}
+  - {fileID: -4939701356717826456}
+  - {fileID: 5652213341724543772}
+  - {fileID: -7033103176688641344}
+  - {fileID: -6868520231749777281}
+  - {fileID: 99900535112223129}
+  - {fileID: -4343503870443935787}
+  - {fileID: 6321975437776906486}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   StringsBanks:
-  - {fileID: 6700815816653573500}
-  cacheTime: 639298579581511990
+  - {fileID: -4771230914955339679}
+  cacheTime: 639303851168383323
   cacheVersion: 131637
---- !u!114 &107212715419614411
+--- !u!114 &99900535112223129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,102 +422,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Puzzles/Cocina/FotoTomar
+  m_Name: event:/SFX/PlayerSFX/ArrastrarCaja
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Puzzles/Cocina/FotoTomar
+  Path: event:/SFX/PlayerSFX/ArrastrarCaja
   Guid:
-    Data1: -1008791862
-    Data2: 1291750690
-    Data3: 1849080717
-    Data4: 1229839112
+    Data1: -718549655
+    Data2: 1267552498
+    Data3: 1549528710
+    Data4: 1121956795
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
---- !u!114 &2004102805944814246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Puzzles/Cocina/PuzzleResuelto
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Puzzles/Cocina/PuzzleResuelto
-  Guid:
-    Data1: 33016224
-    Data2: 1229364454
-    Data3: -2097446733
-    Data4: -1597163050
-  Banks:
-  - {fileID: -488894048771590256}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1994
---- !u!114 &2460226343335136299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Puzzles/Cocina/DropObjetoCaja
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Puzzles/Cocina/DropObjetoCaja
-  Guid:
-    Data1: -1711555948
-    Data2: 1172570936
-    Data3: 1714297501
-    Data4: 753143564
-  Banks:
-  - {fileID: -488894048771590256}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 2974458528623316537}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &2974458528623316537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/DropObjetoCaja/Parameter 1
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Parameter 1
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 1908865971
-    data2: 2668017568
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Length: 2400
 --- !u!114 &3166674926886811112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +458,7 @@ MonoBehaviour:
     Data3: 1072074370
     Data4: -1315486175
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -427,7 +485,7 @@ MonoBehaviour:
     Data3: -308092538
     Data4: 1404507764
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -435,7 +493,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 88000
---- !u!114 &4451640784158186469
+--- !u!114 &3992009237326082215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,16 +503,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Puzzles/Cocina/FotoColocar
+  m_Name: event:/SFX/Puzzles/PickObjetoCaja
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Puzzles/Cocina/FotoColocar
+  Path: event:/SFX/Puzzles/PickObjetoCaja
   Guid:
-    Data1: 699211734
-    Data2: 1188706359
-    Data3: -2004599906
-    Data4: 2036004857
+    Data1: 402121528
+    Data2: 1114029671
+    Data3: 2144008339
+    Data4: 320227015
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 293
+--- !u!114 &5142922763262519620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/Drop_basura
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/Drop_basura
+  Guid:
+    Data1: -1234154065
+    Data2: 1338638213
+    Data3: -1510460779
+    Data4: 740235196
+  Banks:
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -462,7 +547,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &5230419482213842980
+--- !u!114 &5229697968284621458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -472,16 +557,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Puzzles/Cocina/DropAnyObject
+  m_Name: event:/SFX/Puzzles/DropAnyObject
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Puzzles/Cocina/DropAnyObject
+  Path: event:/SFX/Puzzles/DropAnyObject
   Guid:
     Data1: -797702996
     Data2: 1295882694
     Data3: -1573913947
     Data4: 732816218
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -489,7 +574,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 60
---- !u!114 &6700815816653573500
+--- !u!114 &5506105617274802805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -498,17 +583,156 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: ../../TituloFMOD/PtituloFMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639298579581511990
-  FileSizes:
-  - Name: Desktop
-    Value: 1606
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/PuzzleResuelto
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/PuzzleResuelto
+  Guid:
+    Data1: 33016224
+    Data2: 1229364454
+    Data3: -2097446733
+    Data4: -1597163050
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 880
+--- !u!114 &5652213341724543772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/VasoRoto
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/VasoRoto
+  Guid:
+    Data1: 1721088240
+    Data2: 1250069284
+    Data3: 1409654914
+    Data4: -596743229
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &6082680694401160538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DropObjetoCaja/Parameter 1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Parameter 1
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1908865971
+    data2: 2668017568
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
+--- !u!114 &6321975437776906486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PlayerSFX/AgarrarCaja
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/PlayerSFX/AgarrarCaja
+  Guid:
+    Data1: 393093335
+    Data2: 1262443455
+    Data3: -2058509412
+    Data4: -721065340
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128
+--- !u!114 &7799716089733484826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/FotoTomar
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/FotoTomar
+  Guid:
+    Data1: -1008791862
+    Data2: 1291750690
+    Data3: 1849080717
+    Data4: 1229839112
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &8793848724103837610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Puzzles/Cajon_Caer
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Puzzles/Cajon_Caer
+  Guid:
+    Data1: -195757705
+    Data2: 1244503157
+    Data3: 1059720576
+    Data4: 896878176
+  Banks:
+  - {fileID: -6379435346940795993}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 527
 --- !u!114 &8842098076428969883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,7 +752,7 @@ MonoBehaviour:
     Data3: 1118708132
     Data4: 813220852
   Banks:
-  - {fileID: -488894048771590256}
+  - {fileID: -6379435346940795993}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;    
 
 public class MascotaInteract : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class MascotaInteract : MonoBehaviour
     private Rigidbody grabbedObject;
     private Transform originalParent;
     private MascotaController controller;
+
+    [Header("Audio")]
+    [SerializeField] private StudioEventEmitter sfxGrab;
+    [SerializeField] private StudioEventEmitter sfxRelease;
 
     public bool IsCarryingObject => grabbedObject != null;
     public float CurrentObjectMass => grabbedObject != null ? grabbedObject.mass : 0f;
@@ -55,6 +60,7 @@ public class MascotaInteract : MonoBehaviour
 
                 grabbedObject.transform.SetParent(holdPoint);
                 grabbedObject.transform.position = holdPoint.position;
+                sfxGrab?.Play();
             }
         }
     }
@@ -66,6 +72,7 @@ public class MascotaInteract : MonoBehaviour
             grabbedObject.transform.SetParent(originalParent);
             grabbedObject.isKinematic = false;
             grabbedObject = null;
+            sfxRelease?.Play(); 
         }
     }
 

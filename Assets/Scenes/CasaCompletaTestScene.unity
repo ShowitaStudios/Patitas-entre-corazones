@@ -1380,6 +1380,9 @@ GameObject:
   m_Component:
   - component: {fileID: 96909801}
   - component: {fileID: 96909802}
+  - component: {fileID: 96909805}
+  - component: {fileID: 96909804}
+  - component: {fileID: 96909803}
   m_Layer: 5
   m_Name: Pieza_3
   m_TagString: Untagged
@@ -1422,9 +1425,102 @@ MonoBehaviour:
   encajeTarget: {fileID: 1623335422}
   toleranciaEncaje: 60
   controladorRompecabezas: {fileID: 158836590}
-  sonidoTomar: {fileID: 0}
-  sonidoDejar: {fileID: 0}
-  sonidoEncajar: {fileID: 0}
+  sonidoTomar: {fileID: 96909803}
+  sonidoDejar: {fileID: 96909804}
+  sonidoEncajar: {fileID: 96909805}
+--- !u!114 &96909803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96909800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 402121528
+      Data2: 1114029671
+      Data3: 2144008339
+      Data4: 320227015
+    Path: event:/SFX/Puzzles/PickObjetoCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &96909804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96909800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -797702996
+      Data2: 1295882694
+      Data3: -1573913947
+      Data4: 732816218
+    Path: event:/SFX/Puzzles/DropAnyObject
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &96909805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96909800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1234154065
+      Data2: 1338638213
+      Data3: -1510460779
+      Data4: 740235196
+    Path: event:/SFX/Puzzles/Drop_basura
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &97131471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,6 +2537,7 @@ GameObject:
   - component: {fileID: 158836593}
   - component: {fileID: 158836592}
   - component: {fileID: 158836590}
+  - component: {fileID: 158836595}
   m_Layer: 5
   m_Name: PuzzleVeladorCanvas
   m_TagString: Untagged
@@ -2554,6 +2651,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &158836595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158836588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33016224
+      Data2: 1229364454
+      Data3: -2097446733
+      Data4: -1597163050
+    Path: event:/SFX/Puzzles/PuzzleResuelto
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &164448175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5272,6 +5400,8 @@ GameObject:
   - component: {fileID: 325336763}
   - component: {fileID: 325336762}
   - component: {fileID: 325336764}
+  - component: {fileID: 325336765}
+  - component: {fileID: 325336766}
   m_Layer: 5
   m_Name: PuzzleFotoPanel
   m_TagString: Untagged
@@ -5369,6 +5499,70 @@ MonoBehaviour:
   alCompletarPuzzle:
     m_PersistentCalls:
       m_Calls: []
+  sfxDespegarPapel: {fileID: 325336766}
+  sfxPuzzleCompletado: {fileID: 325336765}
+--- !u!114 &325336765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325336760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33016224
+      Data2: 1229364454
+      Data3: -2097446733
+      Data4: -1597163050
+    Path: event:/SFX/Puzzles/PuzzleResuelto
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &325336766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325336760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1565272488
+      Data2: 1126331303
+      Data3: -1236911214
+      Data4: 1755460996
+    Path: event:/SFX/Puzzles/Postit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &327268050
 GameObject:
   m_ObjectHideFlags: 0
@@ -7233,6 +7427,8 @@ GameObject:
   - component: {fileID: 495097498}
   - component: {fileID: 495097505}
   - component: {fileID: 495097507}
+  - component: {fileID: 495097509}
+  - component: {fileID: 495097508}
   m_Layer: 7
   m_Name: Mascota
   m_TagString: Player
@@ -7259,6 +7455,8 @@ MonoBehaviour:
     m_Bits: 64
   holdPoint: {fileID: 177882561}
   pushPower: 5
+  sfxGrab: {fileID: 495097509}
+  sfxRelease: {fileID: 495097508}
 --- !u!114 &495097499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7432,6 +7630,68 @@ MonoBehaviour:
       Data3: -334522236
       Data4: -2084432508
     Path: event:/SFX/PlayerSFX/PlayerJump
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &495097508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495097497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -341962044
+      Data2: 1260593412
+      Data3: -1243800681
+      Data4: -959734848
+    Path: event:/SFX/PlayerSFX/SoltarCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &495097509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495097497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 393093335
+      Data2: 1262443455
+      Data3: -2058509412
+      Data4: -721065340
+    Path: event:/SFX/PlayerSFX/AgarrarCaja
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -13380,6 +13640,9 @@ GameObject:
   m_Component:
   - component: {fileID: 929833896}
   - component: {fileID: 929833897}
+  - component: {fileID: 929833900}
+  - component: {fileID: 929833899}
+  - component: {fileID: 929833898}
   m_Layer: 5
   m_Name: Pieza_1
   m_TagString: Untagged
@@ -13422,9 +13685,102 @@ MonoBehaviour:
   encajeTarget: {fileID: 1623335422}
   toleranciaEncaje: 60
   controladorRompecabezas: {fileID: 158836590}
-  sonidoTomar: {fileID: 0}
-  sonidoDejar: {fileID: 0}
-  sonidoEncajar: {fileID: 0}
+  sonidoTomar: {fileID: 929833900}
+  sonidoDejar: {fileID: 929833898}
+  sonidoEncajar: {fileID: 929833899}
+--- !u!114 &929833898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -797702996
+      Data2: 1295882694
+      Data3: -1573913947
+      Data4: 732816218
+    Path: event:/SFX/Puzzles/DropAnyObject
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &929833899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1234154065
+      Data2: 1338638213
+      Data3: -1510460779
+      Data4: 740235196
+    Path: event:/SFX/Puzzles/Drop_basura
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &929833900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 402121528
+      Data2: 1114029671
+      Data3: 2144008339
+      Data4: 320227015
+    Path: event:/SFX/Puzzles/PickObjetoCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &929861100
 GameObject:
   m_ObjectHideFlags: 0
@@ -13686,6 +14042,9 @@ GameObject:
   m_Component:
   - component: {fileID: 946862579}
   - component: {fileID: 946862580}
+  - component: {fileID: 946862583}
+  - component: {fileID: 946862582}
+  - component: {fileID: 946862581}
   m_Layer: 5
   m_Name: Pieza_2
   m_TagString: Untagged
@@ -13728,9 +14087,102 @@ MonoBehaviour:
   encajeTarget: {fileID: 1623335422}
   toleranciaEncaje: 60
   controladorRompecabezas: {fileID: 158836590}
-  sonidoTomar: {fileID: 0}
-  sonidoDejar: {fileID: 0}
-  sonidoEncajar: {fileID: 0}
+  sonidoTomar: {fileID: 946862581}
+  sonidoDejar: {fileID: 946862582}
+  sonidoEncajar: {fileID: 946862583}
+--- !u!114 &946862581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946862578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 402121528
+      Data2: 1114029671
+      Data3: 2144008339
+      Data4: 320227015
+    Path: event:/SFX/Puzzles/PickObjetoCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &946862582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946862578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -797702996
+      Data2: 1295882694
+      Data3: -1573913947
+      Data4: 732816218
+    Path: event:/SFX/Puzzles/DropAnyObject
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &946862583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946862578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1234154065
+      Data2: 1338638213
+      Data3: -1510460779
+      Data4: 740235196
+    Path: event:/SFX/Puzzles/Drop_basura
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &956459011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -508910845992909714, guid: a2b3dbe75f3a3614eb898cdd5121c82a, type: 3}
@@ -14665,6 +15117,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1022616965}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1022616972}
   m_SourcePrefab: {fileID: 100100000, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
 --- !u!4 &1022616963 stripped
 Transform:
@@ -14732,7 +15187,7 @@ MonoBehaviour:
   cuentaComoObjetivoNivel: 1
   zonaTriggerAsociada: {fileID: 1070020011}
   prefabObjetoRoto: {fileID: 5649958634059062814, guid: f7f93b34e74db424cbc12ffea38ca433, type: 3}
-  sonidoRuptura: {fileID: 0}
+  sonidoRuptura: {fileID: 1022616972}
 --- !u!54 &1022616968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14775,6 +15230,37 @@ MonoBehaviour:
   objectRenderer: {fileID: 0}
   outlineMaterial: {fileID: 2100000, guid: 5770be915861544479a1431b65219e9f, type: 2}
   playerTag: Player
+--- !u!114 &1022616972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022616964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -195757705
+      Data2: 1244503157
+      Data3: 1059720576
+      Data4: 896878176
+    Path: event:/SFX/Puzzles/Cajon_Caer
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10.2
+  OverrideMaxDistance: 20.21
 --- !u!1 &1025993584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b856d6167098f0d4897374053edb23dc, type: 3}
@@ -16761,6 +17247,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1193656422}
   - component: {fileID: 1193656423}
+  - component: {fileID: 1193656426}
+  - component: {fileID: 1193656425}
+  - component: {fileID: 1193656424}
   m_Layer: 5
   m_Name: Pieza_4
   m_TagString: Untagged
@@ -16803,9 +17292,102 @@ MonoBehaviour:
   encajeTarget: {fileID: 1623335422}
   toleranciaEncaje: 60
   controladorRompecabezas: {fileID: 158836590}
-  sonidoTomar: {fileID: 0}
-  sonidoDejar: {fileID: 0}
-  sonidoEncajar: {fileID: 0}
+  sonidoTomar: {fileID: 1193656425}
+  sonidoDejar: {fileID: 1193656424}
+  sonidoEncajar: {fileID: 1193656426}
+--- !u!114 &1193656424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193656421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -797702996
+      Data2: 1295882694
+      Data3: -1573913947
+      Data4: 732816218
+    Path: event:/SFX/Puzzles/DropAnyObject
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1193656425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193656421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 402121528
+      Data2: 1114029671
+      Data3: 2144008339
+      Data4: 320227015
+    Path: event:/SFX/Puzzles/PickObjetoCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1193656426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193656421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1234154065
+      Data2: 1338638213
+      Data3: -1510460779
+      Data4: 740235196
+    Path: event:/SFX/Puzzles/Drop_basura
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1202965342
 GameObject:
   m_ObjectHideFlags: 0
@@ -18212,6 +18794,9 @@ GameObject:
   - component: {fileID: 1295004977}
   - component: {fileID: 1295004976}
   - component: {fileID: 1295004975}
+  - component: {fileID: 1295004978}
+  - component: {fileID: 1295004979}
+  - component: {fileID: 1295004980}
   m_Layer: 5
   m_Name: PuzzleFotoPanel
   m_TagString: Untagged
@@ -18269,6 +18854,9 @@ MonoBehaviour:
   alCompletarPuzzle:
     m_PersistentCalls:
       m_Calls: []
+  sfxAcierto: {fileID: 1295004978}
+  sfxVictoria: {fileID: 1295004980}
+  sfxFallo: {fileID: 1295004979}
 --- !u!114 &1295004976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18307,6 +18895,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295004973}
   m_CullTransparentMesh: 1
+--- !u!114 &1295004978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295004973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1866486234
+      Data2: 1080266826
+      Data3: -496512359
+      Data4: 2006798136
+    Path: event:/SFX/Puzzles/OsuPuzzle
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1295004979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295004973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -559470385
+      Data2: 1173768971
+      Data3: 1753096633
+      Data4: -1198511
+    Path: event:/SFX/Puzzles/OsuFallo
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1295004980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295004973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33016224
+      Data2: 1229364454
+      Data3: -2097446733
+      Data4: -1597163050
+    Path: event:/SFX/Puzzles/PuzzleResuelto
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1299044436
 GameObject:
   m_ObjectHideFlags: 0
@@ -20230,6 +20911,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1446832459}
   - component: {fileID: 1446832460}
+  - component: {fileID: 1446832463}
+  - component: {fileID: 1446832462}
+  - component: {fileID: 1446832461}
   m_Layer: 5
   m_Name: Pieza_5
   m_TagString: Untagged
@@ -20272,9 +20956,102 @@ MonoBehaviour:
   encajeTarget: {fileID: 1623335422}
   toleranciaEncaje: 60
   controladorRompecabezas: {fileID: 158836590}
-  sonidoTomar: {fileID: 0}
-  sonidoDejar: {fileID: 0}
-  sonidoEncajar: {fileID: 0}
+  sonidoTomar: {fileID: 1446832461}
+  sonidoDejar: {fileID: 1446832462}
+  sonidoEncajar: {fileID: 1446832463}
+--- !u!114 &1446832461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446832458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 402121528
+      Data2: 1114029671
+      Data3: 2144008339
+      Data4: 320227015
+    Path: event:/SFX/Puzzles/PickObjetoCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1446832462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446832458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -797702996
+      Data2: 1295882694
+      Data3: -1573913947
+      Data4: 732816218
+    Path: event:/SFX/Puzzles/DropAnyObject
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1446832463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446832458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1234154065
+      Data2: 1338638213
+      Data3: -1510460779
+      Data4: 740235196
+    Path: event:/SFX/Puzzles/Drop_basura
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1447473076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21994,6 +22771,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1526363619}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1526363625}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1526363624}
   m_SourcePrefab: {fileID: 100100000, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
 --- !u!4 &1526363616 stripped
 Transform:
@@ -22091,8 +22874,70 @@ MonoBehaviour:
   tiempoMaxEntrePulsaciones: 1
   shakeIntensity: 0.05
   shakeSpeed: 40
-  sfxOpenBox: {fileID: 0}
-  sfxRascar: {fileID: 0}
+  sfxOpenBox: {fileID: 1526363624}
+  sfxRascar: {fileID: 1526363625}
+--- !u!114 &1526363624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526363617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1202768026
+      Data2: 1088849522
+      Data3: -1416228680
+      Data4: -1124632777
+    Path: event:/SFX/Puzzles/Puzzle_Caja_Abrir
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 5.83
+  OverrideMaxDistance: 20
+--- !u!114 &1526363625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526363617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1740329030
+      Data2: 1306666441
+      Data3: 1854998699
+      Data4: -1847511114
+    Path: event:/SFX/Puzzles/RascarCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 6.01
+  OverrideMaxDistance: 20
 --- !u!1 &1531023715
 GameObject:
   m_ObjectHideFlags: 0
@@ -24794,6 +25639,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1688812749}
   - component: {fileID: 1688812750}
+  - component: {fileID: 1688812753}
+  - component: {fileID: 1688812752}
+  - component: {fileID: 1688812751}
   m_Layer: 5
   m_Name: Pieza_6
   m_TagString: Untagged
@@ -24836,9 +25684,102 @@ MonoBehaviour:
   encajeTarget: {fileID: 1623335422}
   toleranciaEncaje: 60
   controladorRompecabezas: {fileID: 158836590}
-  sonidoTomar: {fileID: 0}
-  sonidoDejar: {fileID: 0}
-  sonidoEncajar: {fileID: 0}
+  sonidoTomar: {fileID: 1688812751}
+  sonidoDejar: {fileID: 1688812752}
+  sonidoEncajar: {fileID: 1688812753}
+--- !u!114 &1688812751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688812748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 402121528
+      Data2: 1114029671
+      Data3: 2144008339
+      Data4: 320227015
+    Path: event:/SFX/Puzzles/PickObjetoCaja
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1688812752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688812748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -797702996
+      Data2: 1295882694
+      Data3: -1573913947
+      Data4: 732816218
+    Path: event:/SFX/Puzzles/DropAnyObject
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1688812753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688812748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1234154065
+      Data2: 1338638213
+      Data3: -1510460779
+      Data4: 740235196
+    Path: event:/SFX/Puzzles/Drop_basura
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1694849255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dc177c6a8f94e8340a2d5be2d1403bd0, type: 3}

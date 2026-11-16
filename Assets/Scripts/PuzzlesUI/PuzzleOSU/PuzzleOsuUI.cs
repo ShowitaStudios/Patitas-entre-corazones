@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using FMODUnity;
 
 public class PuzzleOsuUI : MonoBehaviour
 {
@@ -32,9 +33,9 @@ public class PuzzleOsuUI : MonoBehaviour
     [Header("Eventos")]
     [SerializeField] private UnityEvent alCompletarPuzzle;
     // Referencias para los eventos de audio del puzzle Osu, aqui tienes que poner tal cual pero sin los slash para crear las referencias para eventos del Fmod, saludos nato si rompes algo te mato
-    // [SerializeField] private FMODUnity.EventReference eventoAciertoFMOD;
-    // [SerializeField] private FMODUnity.EventReference eventoFalloFMOD;
-    // [SerializeField] private FMODUnity.EventReference eventoVictoriaFMOD;
+    [SerializeField] private StudioEventEmitter sfxAcierto;
+    [SerializeField] private StudioEventEmitter sfxVictoria;
+    [SerializeField] private StudioEventEmitter sfxFallo;
 
     private int aciertosActuales = 0;
     private bool yaCompletado = false;
@@ -130,7 +131,7 @@ public class PuzzleOsuUI : MonoBehaviour
         aciertosActuales++;
         ActualizarImagenSprite();
 
-        // FMODUnity.RuntimeManager.PlayOneShot(eventoAciertoFMOD);
+        sfxAcierto?.Play();
 
         if (aciertosActuales >= aciertosRequeridos)
         {
@@ -158,7 +159,7 @@ public class PuzzleOsuUI : MonoBehaviour
 
     public void RegistrarFallo()
     {
-        // Lógica de fallo opcional
+        sfxFallo?.Play();   
     }
 
     private void CompletarPuzzle()
@@ -168,8 +169,8 @@ public class PuzzleOsuUI : MonoBehaviour
         if (rutinaGenerador != null) StopCoroutine(rutinaGenerador);
         LimpiarCirculosRestantes();
         
-        // FMODUnity.RuntimeManager.PlayOneShot(eventoVictoriaFMOD);
-        
+        sfxVictoria?.Play();    
+
         if (!string.IsNullOrEmpty(idUnicoPuzzle) && GameManager.Instance != null)
         {
             GameManager.Instance.RegistrarPuzzleCompletado(idUnicoPuzzle);

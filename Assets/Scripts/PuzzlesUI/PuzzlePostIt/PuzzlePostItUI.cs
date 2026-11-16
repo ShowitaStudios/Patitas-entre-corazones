@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using FMODUnity;    
 
 public class PuzzlePostItUI : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class PuzzlePostItUI : MonoBehaviour
 
     [Header("Eventos")]
     [SerializeField] private UnityEvent alCompletarPuzzle;
+
+    [Header("SFX")]
+    [SerializeField] private StudioEventEmitter sfxDespegarPapel;
+    [SerializeField] private StudioEventEmitter sfxPuzzleCompletado;
 
     private int papelesDespegadosActuales = 0;
     private bool yaCompletado = false;
@@ -65,12 +70,15 @@ public class PuzzlePostItUI : MonoBehaviour
 
         botonPapel.interactable = false;
         papelesDespegadosActuales++;
+        sfxDespegarPapel?.Play();
 
         StartCoroutine(AnimacionCaidaPapel(botonPapel.GetComponent<RectTransform>(), botonPapel.gameObject));
 
         if (papelesDespegadosActuales >= papelesRequeridos)
         {
+
             CompletarPuzzle();
+            sfxPuzzleCompletado?.Play();
         }
     }
 
