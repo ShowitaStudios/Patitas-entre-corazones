@@ -2,39 +2,43 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
 public class EfectoTypewriter : MonoBehaviour
 {
-    [Header("Configuración de Texto")]
-    [TextArea(3, 10)]
-    [SerializeField] private string textoAImprimir = "Test Texto Alex XDDD";
+    [SerializeField] private TMP_Text textoMeshPro;
     [SerializeField] private float velocidadEscritura = 0.05f;
+    [SerializeField, TextArea] private string textoCompleto;
 
-    private TextMeshProUGUI componenteTexto;
-
-    private void Awake()
-    {
-        componenteTexto = GetComponent<TextMeshProUGUI>();
-    }
-
-    private void Start()
-    {
-        IniciarEfecto();
-    }
+    private Coroutine corrutinaEscritura;
 
     public void IniciarEfecto()
     {
-        StopAllCoroutines();
-        StartCoroutine(MostrarTextoLetraPorLetra());
+        // Si el objeto está desactivado, lo activamos para que no rompa la corrutina
+        if (!gameObject.activeInHierarchy)
+        {
+            gameObject.SetActive(true);
+        }
+
+        if (textoMeshPro == null)
+        {
+            textoMeshPro = GetComponent<TMP_Text>();
+        }
+
+        if (textoMeshPro != null)
+        {
+            if (corrutinaEscritura != null)
+            {
+                StopCoroutine(corrutinaEscritura);
+            }
+            corrutinaEscritura = StartCoroutine(EscribirTexto());
+        }
     }
 
-    private IEnumerator MostrarTextoLetraPorLetra()
+    private IEnumerator EscribirTexto()
     {
-        componenteTexto.text = "";
-
-        foreach (char letra in textoAImprimir.ToCharArray())
+        textoMeshPro.text = "";
+        foreach (char letra in textoCompleto.ToCharArray())
         {
-            componenteTexto.text += letra;
+            textoMeshPro.text += letra;
             yield return new WaitForSeconds(velocidadEscritura);
         }
     }

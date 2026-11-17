@@ -9,14 +9,26 @@ public class DetectorClicsMenu : MonoBehaviour, IPointerDownHandler
 
     [Tooltip("El Canvas principal o el contenedor donde se instanciarán las gotas")]
     [SerializeField] private RectTransform contenedorCanvas;
+
+    [Header("Easter Egg (Menú Secreto)")]
+    [SerializeField] private int clicksRequeridos = 67;
+    [SerializeField] private string nombreEscenaSecreta;
+    private int clicksActuales = 0;
     
     public void OnPointerDown(PointerEventData eventData)
     {
+        clicksActuales++;
+        if (clicksActuales >= clicksRequeridos)
+        {
+            AbrirEscenaSecreta();
+        }
+
         if (prefabEfectoGota == null || contenedorCanvas == null)
         {
             Debug.LogWarning("Faltan referencias en el DetectorClicsMenu.");
             return;
         }
+
         Vector2 posicionEnCanvas;
         bool exitoConversion = RectTransformUtility.ScreenPointToLocalPointInRectangle(
             contenedorCanvas,
@@ -34,6 +46,18 @@ public class DetectorClicsMenu : MonoBehaviour, IPointerDownHandler
             {
                 rectTransformGota.anchoredPosition = posicionEnCanvas;
             }
+        }
+    }
+
+    private void AbrirEscenaSecreta()
+    {
+        if (!string.IsNullOrEmpty(nombreEscenaSecreta))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(nombreEscenaSecreta);
+        }
+        else
+        {
+            Debug.LogWarning("El nombre de la escena secreta no está asignado en el Inspector.");
         }
     }
 }

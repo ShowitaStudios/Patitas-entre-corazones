@@ -1088,6 +1088,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectorClicsMenu
   prefabEfectoGota: {fileID: 9030037929471940585, guid: 2110e837c57cee742afb763a0619378d, type: 3}
   contenedorCanvas: {fileID: 1765646941}
+  clicksRequeridos: 67
+  nombreEscenaSecreta: CinematicaSecretaScene
 --- !u!1 &1838763546
 GameObject:
   m_ObjectHideFlags: 0
