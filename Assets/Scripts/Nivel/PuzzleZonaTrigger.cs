@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class PuzzleZonaTrigger : MonoBehaviour
 {
     [Header("Configuración de Zona")]
@@ -7,20 +8,42 @@ public class PuzzleZonaTrigger : MonoBehaviour
     [SerializeField] private int puzzlesActualesEnZona = 0;
     [SerializeField] private int totalPuzzlesEnZona = 3;
 
+    [Header("Aviso Visual de Zona")]
+    [SerializeField] private bool mostrarImagenAlEntrar = true;
+    [Tooltip("Imagen específica que aparecerá al entrar a este trigger.")]
+    [SerializeField] private Sprite imagenZona;
+
+    private void Awake()
+    {
+        Collider col = GetComponent<Collider>();
+        if (col != null && !col.isTrigger)
+        {
+            col.isTrigger = true;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             MostrarProgresoEnUI();
+
+            if (mostrarImagenAlEntrar && CanvasImagenTrigger.Instance != null)
+            {
+                CanvasImagenTrigger.Instance.MostrarCanvas(imagenZona);
+            }
         }
     }
 
-    public void RegistrarPuzzleZona()
+    public void RegistrarPuzzleZona(bool mostrarEnUI = true)
     {
-        // Usamos Mathf.Min para asegurarnos de que jamás sobrepase el total
         if (puzzlesActualesEnZona < totalPuzzlesEnZona)
         {
-            puzzlesActualesEnZona++;
+            puzzlesActualesEnZona = Mathf.Min(puzzlesActualesEnZona + 1, totalPuzzlesEnZona);
+        }
+
+        if (mostrarEnUI)
+        {
             MostrarProgresoEnUI();
         }
     }
