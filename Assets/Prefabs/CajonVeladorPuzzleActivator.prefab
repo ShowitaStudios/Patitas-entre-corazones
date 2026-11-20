@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &184177960389760262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6431844493217504031}
+  m_Layer: 0
+  m_Name: TextBillboardTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6431844493217504031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184177960389760262}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.636, y: 0.708, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4981966204128036004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4803588870324151119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,7 +109,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6431844493217504031}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
       insertIndex: -1
@@ -88,11 +122,19 @@ PrefabInstance:
       addedObject: {fileID: 6171845603525305694}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1825513997645891542}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1167399269101969482}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6556583952309182473}
   m_SourcePrefab: {fileID: 100100000, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+--- !u!4 &4981966204128036004 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
+  m_PrefabInstance: {fileID: 4803588870324151119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5649958634059062814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e951eb4adfb064438f5b4f8b248e45b, type: 3}
@@ -139,6 +181,26 @@ MonoBehaviour:
   objectRenderer: {fileID: 6154260155972353995}
   outlineMaterial: {fileID: 2100000, guid: 5770be915861544479a1431b65219e9f, type: 2}
   playerTag: Player
+--- !u!114 &1825513997645891542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649958634059062814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d13db7c8c02d64b90c4ab56218b5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BillboardTextoZona
+  textoBillboard: {fileID: 0}
+  puntoPosicionTexto: {fileID: 6431844493217504031}
+  camara: {fileID: 0}
+  mensaje: Buscar (E)
+  ocultarAlIniciar: 1
+  tagJugador: Player
+  suavizadoPosicion: 0
+  alinearConCamara: 1
 --- !u!65 &1167399269101969482
 BoxCollider:
   m_ObjectHideFlags: 0
