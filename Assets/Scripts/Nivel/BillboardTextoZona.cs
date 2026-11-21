@@ -5,7 +5,9 @@ using UnityEngine;
 public class BillboardTextoZona : MonoBehaviour
 {
     [Header("Referencias (Opcionales - Auto-asignación)")]
-    [Tooltip("Texto TMP (3D o en Canvas World Space). Si queda vacío, se busca en hijos, objeto o escena.")]
+    [Tooltip("Nombre del objeto TMP a priorizar en la búsqueda automática.")]
+    [SerializeField] private string nombreTextoObjetivo = "TextoIndicadorPuzzle";
+    [Tooltip("Texto TMP (3D o en Canvas World Space). Si queda vacío, busca 'TextoIndicadorPuzzle' y luego otros TMP_Text.")]
     [SerializeField] private TMP_Text textoBillboard;
     [Tooltip("Transform donde se posicionará el texto flotante. Si queda vacío, se busca automáticamente.")]
     [SerializeField] private Transform puntoPosicionTexto;
@@ -43,21 +45,84 @@ public class BillboardTextoZona : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"[BillboardTextoZona] No se encontró ningún TMP_Text en '{name}' ni en la escena.");
+            Debug.LogWarning($"[BillboardTextoZona] No se encontró ningún TMP_Text ('{nombreTextoObjetivo}') en '{name}' ni en la escena.");
         }
     }
 
     private void OnValidate()
     {
-        TMP_Text texto = textoBillboard != null ? textoBillboard : GetComponentInChildren<TMP_Text>(true);
+        TMP_Text texto = textoBillboard != null ? textoBillboard : BuscarTextoPorNombreEnHijos(ObtenerNombreObjetivo());
+        if (texto == null)
+        {
+            texto = GetComponentInChildren<TMP_Text>(true);
+        }
+
         if (texto != null && !Application.isPlaying)
         {
             texto.text = mensaje;
         }
     }
 
+    [ContextMenu("Auto-Asignar Referencias")]
+    private void AutoAsignarDesdeMenu()
+    {
+        textoBillboard = null;
+        puntoPosicionTexto = null;
+        camara = null;
+        ResolverReferencias();
+    }
+
+    private string ObtenerNombreObjetivo()
+    {
+        return string.IsNullOrWhiteSpace(nombreTextoObjetivo)
+            ? "TextoIndicadorPuzzle"
+            : nombreTextoObjetivo.Trim();
+    }
+
+    private TMP_Text BuscarTextoPorNombreEnHijos(string nombreBuscado)
+    {
+        TMP_Text[] textosHijos = GetComponentsInChildren<TMP_Text>(true);
+        for (int i = 0; i < textosHijos.Length; i++)
+        {
+            if (textosHijos[i] != null && textosHijos[i].gameObject.name == nombreBuscado)
+            {
+                return textosHijos[i];
+            }
+        }
+        return null;
+    }
+
+    private TMP_Text BuscarTextoPorNombreEnEscena(string nombreBuscado)
+    {
+#if UNITY_2023_1_OR_NEWER
+        TMP_Text[] textosEscena = Object.FindObjectsByType<TMP_Text>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+#else
+        TMP_Text[] textosEscena = Object.FindObjectsOfType<TMP_Text>(true);
+#endif
+        for (int i = 0; i < textosEscena.Length; i++)
+        {
+            if (textosEscena[i] != null && textosEscena[i].gameObject.name == nombreBuscado)
+            {
+                return textosEscena[i];
+            }
+        }
+        return null;
+    }
+
     private void ResolverReferencias()
     {
+        string nombreObjetivo = ObtenerNombreObjetivo();
+
+        if (textoBillboard == null)
+        {
+            textoBillboard = BuscarTextoPorNombreEnHijos(nombreObjetivo);
+        }
+
+        if (textoBillboard == null)
+        {
+            textoBillboard = BuscarTextoPorNombreEnEscena(nombreObjetivo);
+        }
+
         if (textoBillboard == null)
         {
             textoBillboard = GetComponentInChildren<TMP_Text>(true);
