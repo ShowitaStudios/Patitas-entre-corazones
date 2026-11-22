@@ -69,7 +69,6 @@ public class ObjetoPuzzle : MonoBehaviour
         {
             if (usarForcejeo)
             {
-                // Controlar el tiempo límite entre pulsaciones
                 if (pulsacionesActuales > 0 && Time.time - tiempoUltimaPulsacion > tiempoMaxEntrePulsaciones)
                 {
                     ResetearForcejeo();
@@ -83,7 +82,6 @@ public class ObjetoPuzzle : MonoBehaviour
             }
             else
             {
-                // Comportamiento clásico de un solo toque
                 if (Keyboard.current.eKey.wasPressedThisFrame)
                 {
                     puzzleManager.AbrirPuzzlePorNombre(puzzleID);
@@ -92,11 +90,9 @@ public class ObjetoPuzzle : MonoBehaviour
         }
         else if (pulsacionesActuales > 0 && !IsPlayerNearby())
         {
-            // Si el jugador se aleja, se reinicia el progreso del forcejeo
             ResetearForcejeo();
         }
 
-        // Manejar el movimiento de temblor (feedback visual)
         if (estaTemblando)
         {
             float offsetX = Mathf.Sin(Time.time * shakeSpeed) * shakeIntensity;

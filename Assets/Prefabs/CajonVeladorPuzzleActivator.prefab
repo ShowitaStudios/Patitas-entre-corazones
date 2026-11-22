@@ -193,10 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d13db7c8c02d64b90c4ab56218b5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BillboardTextoZona
+  nombreTextoObjetivo: TextoIndicadorPuzzle
   textoBillboard: {fileID: 0}
   puntoPosicionTexto: {fileID: 6431844493217504031}
   camara: {fileID: 0}
-  mensaje: Buscar (E)
+  mensaje: Sacar papeles arrugados y cosas para morder (E)
   ocultarAlIniciar: 1
   tagJugador: Player
   suavizadoPosicion: 0

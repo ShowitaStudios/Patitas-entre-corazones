@@ -10,8 +10,12 @@ public class PuzzleZonaTrigger : MonoBehaviour
 
     [Header("Aviso Visual de Zona")]
     [SerializeField] private bool mostrarImagenAlEntrar = true;
+    [Tooltip("Si está activo, la imagen de esta zona solo se muestra la primera vez que el jugador entra.")]
+    [SerializeField] private bool mostrarImagenSoloPrimeraVez = true;
     [Tooltip("Imagen específica que aparecerá al entrar a este trigger.")]
     [SerializeField] private Sprite imagenZona;
+
+    private bool imagenYaMostradaEnZona = false;
 
     private void Awake()
     {
@@ -28,8 +32,12 @@ public class PuzzleZonaTrigger : MonoBehaviour
         {
             MostrarProgresoEnUI();
 
-            if (mostrarImagenAlEntrar && CanvasImagenTrigger.Instance != null)
+            bool puedeMostrarImagen = mostrarImagenAlEntrar &&
+                                      (!mostrarImagenSoloPrimeraVez || !imagenYaMostradaEnZona);
+
+            if (puedeMostrarImagen && CanvasImagenTrigger.Instance != null)
             {
+                imagenYaMostradaEnZona = true;
                 CanvasImagenTrigger.Instance.MostrarCanvas(imagenZona);
             }
         }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class PuzzleFlickManager : MonoBehaviour
 {
@@ -24,14 +25,27 @@ public class PuzzleFlickManager : MonoBehaviour
     [Tooltip("Usa tiempo real (ignora Time.timeScale = 0). Útil si tu UI pausa el juego.")]
     [SerializeField] private bool usarTiempoReal = true;
 
+    [Header("Restaurar Control al Cerrar")]
+    [Tooltip("Restaura Time.timeScale a 1 al cerrar el canvas.")]
+    [SerializeField] private bool restaurarTimeScale = true;
+    [Tooltip("Bloquea y oculta el cursor para volver al control en tercera persona.")]
+    [SerializeField] private bool bloquearYOcultarCursor = true;
+    [Tooltip("Limpia el objeto seleccionado en el EventSystem al cerrar.")]
+    [SerializeField] private bool limpiarSeleccionUI = true;
+    [Tooltip("Llama a PuzzleManager.CerrarPuzzleActual() al cerrarse.")]
+    [SerializeField] private bool notificarPuzzleManagerAlCerrar = true;
+
     [Header("Conexión Opcional con Zona")]
     [SerializeField] private PuzzleZonaTrigger zonaAsociada;
     [SerializeField] private bool registrarEnZonaAlCompletar = true;
 
-    [Header("Eventos al Completar")]
+    [Header("Eventos")]
     public UnityEvent onPuzzleCompletado;
+    [Tooltip("Se ejecuta justo antes de desactivar el canvas al completarse.")]
+    public UnityEvent onAlCerrarCanvas;
 
     private readonly HashSet<ElementoFlickPuzzle> elementosCompletados = new HashSet<ElementoFlickPuzzle>();
+    private PuzzleManager puzzleManager;
     private Coroutine rutinaCierre;
     private bool puzzleCompletado = false;
 
@@ -39,6 +53,19 @@ public class PuzzleFlickManager : MonoBehaviour
     public float MargenSalida => margenSalida;
 
     private void Awake()
+    {
+        AsegurarReferencias();
+
+        for (int i = 0; i < elementos.Count; i++)
+        {
+            if (elementos[i] != null)
+            {
+                elementos[i].Inicializar(this);
+            }
+        }
+    }
+
+    private void AsegurarReferencias()
     {
         if (areaPanel == null)
         {
@@ -59,12 +86,13 @@ public class PuzzleFlickManager : MonoBehaviour
             GetComponentsInChildren(true, elementos);
         }
 
-        for (int i = 0; i < elementos.Count; i++)
+        if (puzzleManager == null)
         {
-            if (elementos[i] != null)
-            {
-                elementos[i].Inicializar(this);
-            }
+#if UNITY_2023_1_OR_NEWER
+            puzzleManager = Object.FindFirstObjectByType<PuzzleManager>(FindObjectsInactive.Include);
+#else
+            puzzleManager = Object.FindObjectOfType<PuzzleManager>(true);
+#endif
         }
     }
 
@@ -107,7 +135,6 @@ public class PuzzleFlickManager : MonoBehaviour
                 StopCoroutine(rutinaCierre);
             }
 
-            // Corremos la espera en este MonoBehaviour o en el objeto a cerrar si sigue activo
             rutinaCierre = StartCoroutine(RutinaCerrarCanvas());
         }
     }
@@ -126,12 +153,51 @@ public class PuzzleFlickManager : MonoBehaviour
             }
         }
 
+        RestaurarEstadoGameplay();
+        onAlCerrarCanvas?.Invoke();
+
         if (objetoACerrar != null)
         {
             objetoACerrar.SetActive(false);
         }
 
         rutinaCierre = null;
+    }
+
+    private void RestaurarEstadoGameplay()
+    {
+        if (restaurarTimeScale && Mathf.Approximately(Time.timeScale, 0f))
+        {
+            Time.timeScale = 1f;
+        }
+
+        if (bloquearYOcultarCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        if (limpiarSeleccionUI && EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        if (notificarPuzzleManagerAlCerrar)
+        {
+            if (puzzleManager == null)
+            {
+#if UNITY_2023_1_OR_NEWER
+                puzzleManager = Object.FindFirstObjectByType<PuzzleManager>(FindObjectsInactive.Include);
+#else
+                puzzleManager = Object.FindObjectOfType<PuzzleManager>(true);
+#endif
+            }
+
+            if (puzzleManager != null)
+            {
+                puzzleManager.CerrarPuzzleActual();
+            }
+        }
     }
 
     public void ReiniciarPuzzle()

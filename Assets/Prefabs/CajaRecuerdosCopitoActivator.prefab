@@ -166,6 +166,24 @@ MonoBehaviour:
   shakeSpeed: 45
   sfxOpenBox: {fileID: 0}
   sfxRascar: {fileID: 0}
+  delayPostCompletado: 0
+  ejecutarSoloUnaVez: 1
+  bloquearInteraccionAlCompletar: 0
+  onPuzzleCompletado:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6171845603525305694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d13db7c8c02d64b90c4ab56218b5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BillboardTextoZona
+  nombreTextoObjetivo: TextoIndicadorPuzzle
   textoBillboard: {fileID: 0}
   puntoPosicionTexto: {fileID: 6431844493217504031}
   camara: {fileID: 0}

@@ -20,8 +20,6 @@ public class PuzzleManager : MonoBehaviour
     private Dictionary<string, GameObject> diccionarioPuzzles = new Dictionary<string, GameObject>();
     private GameObject puzzleActual;
     private bool puzzleActivo = false;
-
-    // Propiedad pública para que la cámara pueda consultar si hay un puzzle activo
     public bool PuzzleActivo => puzzleActivo;
 
     private void Awake()
@@ -82,7 +80,6 @@ public class PuzzleManager : MonoBehaviour
             jugadorController.enabled = !enPuzzle;
         }
 
-        // El Manager solo se encarga del cursor
         if (enPuzzle)
         {
             Cursor.lockState = CursorLockMode.None;
