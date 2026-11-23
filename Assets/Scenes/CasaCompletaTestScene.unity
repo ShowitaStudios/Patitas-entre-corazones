@@ -3333,6 +3333,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 158836595}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onAlCerrarCanvas:
     m_PersistentCalls:
       m_Calls: []
@@ -3383,6 +3395,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioParameterTrigger
   CollisionTag: Player
   Emitters:
+  - Target: {fileID: 167556591}
+    Params:
+    - Name: ZonaShader
+      Value: 1
+    - Name: Zona
+      Value: 0
   - Target: {fileID: 167556588}
     Params:
     - Name: Zona
@@ -3626,6 +3644,7 @@ GameObject:
   - component: {fileID: 167556589}
   - component: {fileID: 167556588}
   - component: {fileID: 167556590}
+  - component: {fileID: 167556591}
   m_Layer: 0
   m_Name: Musica
   m_TagString: Untagged
@@ -3703,6 +3722,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &167556591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167556587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2109696640
+      Data2: 1240571133
+      Data3: 1151580830
+      Data4: 220958167
+    Path: event:/AmbientSFX/SistemaAmbient
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &169161012
 GameObject:
   m_ObjectHideFlags: 0
@@ -8997,7 +9047,7 @@ Transform:
   m_GameObject: {fileID: 495097497}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.4954812, z: -0, w: 0.8686187}
-  m_LocalPosition: {x: -37.07, y: 23.55, z: -43.08}
+  m_LocalPosition: {x: -46.77, y: 5.85, z: -44.83}
   m_LocalScale: {x: 2.88127, y: 2.88127, z: 2.88127}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -18819,7 +18869,7 @@ PlayableDirector:
   - key: {fileID: -5349912301332451624, guid: 715ee5089f50ad54ea6ef9cd3172ef89, type: 2}
     value: {fileID: 169161013}
   - key: {fileID: -653673367208441714, guid: 715ee5089f50ad54ea6ef9cd3172ef89, type: 2}
-    value: {fileID: 1869483582}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1070609325
@@ -28193,7 +28243,7 @@ MonoBehaviour:
       eventoAccion:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 764442771}
+          - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
             m_Mode: 6
@@ -28372,7 +28422,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 1
             m_CallState: 2
-          - m_Target: {fileID: 1869483577}
+          - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
             m_Mode: 6
@@ -31969,7 +32019,7 @@ PlayableDirector:
   - key: {fileID: 7438569382048979572, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
     value: {fileID: 129450629}
   - key: {fileID: -1952954152433156839, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
-    value: {fileID: 1869483582}
+    value: {fileID: 0}
   - key: {fileID: 4662527360200169213, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
     value: {fileID: 623776778}
   - key: {fileID: -1999124591850918902, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
@@ -31977,7 +32027,7 @@ PlayableDirector:
   - key: {fileID: 5324269994937833514, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
     value: {fileID: 1794088856}
   - key: {fileID: 2612261411193679591, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
-    value: {fileID: 764442777}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1735793252
@@ -35840,6 +35890,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioParameterTrigger
   CollisionTag: Player
   Emitters:
+  - Target: {fileID: 167556591}
+    Params:
+    - Name: ZonaShader
+      Value: 2
+    - Name: Zona
+      Value: 2
   - Target: {fileID: 167556588}
     Params:
     - Name: Zona
@@ -37181,6 +37237,7 @@ GameObject:
   - component: {fileID: 1965980192}
   - component: {fileID: 1965980194}
   - component: {fileID: 1965980193}
+  - component: {fileID: 1965980195}
   m_Layer: 0
   m_Name: Collider Living
   m_TagString: Untagged
@@ -37197,7 +37254,7 @@ Transform:
   m_GameObject: {fileID: 1965980191}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2861, y: 0, z: -0.0794}
+  m_LocalPosition: {x: -0.0178, y: 0, z: -0.0092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37217,10 +37274,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioParameterTrigger
   CollisionTag: Player
   Emitters:
+  - Target: {fileID: 167556591}
+    Params:
+    - Name: ZonaShader
+      Value: 0
+    - Name: Zona
+      Value: 3
   - Target: {fileID: 167556588}
     Params:
     - Name: Zona
-      Value: 1
+      Value: 3
   TriggerEvent: 3
 --- !u!65 &1965980194
 BoxCollider:
@@ -37241,8 +37304,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.69, y: 0.72, z: 0.65}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: -0.9, y: 0.72, z: 0.65}
+  m_Center: {x: 0.49, y: 0, z: 0}
+--- !u!65 &1965980195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965980191}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.13, y: 0.44, z: 0.1}
+  m_Center: {x: -0.104, y: -0.12, z: -0.01}
 --- !u!1 &1967178932
 GameObject:
   m_ObjectHideFlags: 0
@@ -37442,8 +37526,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 10.2
-  OverrideMaxDistance: 20.21
+  OverrideMinDistance: 13.3
+  OverrideMaxDistance: 33.61
 --- !u!65 &1975427252
 BoxCollider:
   m_ObjectHideFlags: 0
