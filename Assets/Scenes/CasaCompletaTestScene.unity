@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b67ddc736d1854399313fbdfff4170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PropFlotanteRotacion
-  flotar: 1
+  flotar: 0
   amplitudFlote: 0.15
   velocidadFlote: 1.5
   desfaseFase: 0
@@ -675,7 +675,7 @@ MonoBehaviour:
   ejeRotacion: 0
   ejePersonalizado: {x: 0, y: 1, z: 0}
   velocidadRotacion: 35
-  espacioRotacion: 1
+  espacioRotacion: 0
 --- !u!212 &24677508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8214,16 +8214,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b67ddc736d1854399313fbdfff4170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PropFlotanteRotacion
-  flotar: 1
+  flotar: 0
   amplitudFlote: 0.15
   velocidadFlote: 1.5
   desfaseFase: 0
-  desfaseAleatorioAlIniciar: 1
+  desfaseAleatorioAlIniciar: 0
   rotar: 1
   ejeRotacion: 0
   ejePersonalizado: {x: 0, y: 1, z: 0}
-  velocidadRotacion: 20
-  espacioRotacion: 1
+  velocidadRotacion: 35
+  espacioRotacion: 0
 --- !u!212 &422269810
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9046,8 +9046,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495097497}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.4954812, z: -0, w: 0.8686187}
-  m_LocalPosition: {x: -46.77, y: 5.85, z: -44.83}
+  m_LocalRotation: {x: -0, y: -0.99832773, z: -0, w: -0.057807673}
+  m_LocalPosition: {x: 0.5, y: 21.36, z: 35.1}
   m_LocalScale: {x: 2.88127, y: 2.88127, z: 2.88127}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9055,7 +9055,7 @@ Transform:
   - {fileID: 1150783480}
   - {fileID: 506754294}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -59.403, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -186.628, z: 0}
 --- !u!114 &495097505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13399,7 +13399,7 @@ Transform:
   m_GameObject: {fileID: 764442771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.43, y: 14.22, z: 73.07}
+  m_LocalPosition: {x: 41.88, y: 14.13, z: 73.08}
   m_LocalScale: {x: 16.597862, y: 27.917545, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17735,15 +17735,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -124.78
+      value: -100.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.05
+      value: 9.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -143.91
+      value: -146.83
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e5ff383cbe962442856d16516da9927, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29792,16 +29792,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b67ddc736d1854399313fbdfff4170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PropFlotanteRotacion
-  flotar: 1
+  flotar: 0
   amplitudFlote: 0.15
   velocidadFlote: 1.5
   desfaseFase: 0
-  desfaseAleatorioAlIniciar: 1
+  desfaseAleatorioAlIniciar: 0
   rotar: 1
   ejeRotacion: 0
   ejePersonalizado: {x: 0, y: 1, z: 0}
-  velocidadRotacion: 20
-  espacioRotacion: 1
+  velocidadRotacion: 35
+  espacioRotacion: 0
 --- !u!212 &1604501168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32019,7 +32019,7 @@ PlayableDirector:
   - key: {fileID: 7438569382048979572, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
     value: {fileID: 129450629}
   - key: {fileID: -1952954152433156839, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1869483582}
   - key: {fileID: 4662527360200169213, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
     value: {fileID: 623776778}
   - key: {fileID: -1999124591850918902, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
@@ -32027,7 +32027,7 @@ PlayableDirector:
   - key: {fileID: 5324269994937833514, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
     value: {fileID: 1794088856}
   - key: {fileID: 2612261411193679591, guid: 6faab380121a9534f8260a7e6a8dfd2f, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 764442777}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1735793252
@@ -37419,16 +37419,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b67ddc736d1854399313fbdfff4170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PropFlotanteRotacion
-  flotar: 1
+  flotar: 0
   amplitudFlote: 0.15
   velocidadFlote: 1.5
   desfaseFase: 0
-  desfaseAleatorioAlIniciar: 1
+  desfaseAleatorioAlIniciar: 0
   rotar: 1
   ejeRotacion: 0
   ejePersonalizado: {x: 0, y: 1, z: 0}
-  velocidadRotacion: 20
-  espacioRotacion: 1
+  velocidadRotacion: 35
+  espacioRotacion: 0
 --- !u!212 &1971307071
 SpriteRenderer:
   m_ObjectHideFlags: 0

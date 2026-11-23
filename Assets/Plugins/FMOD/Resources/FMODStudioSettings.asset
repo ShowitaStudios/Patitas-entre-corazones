@@ -307,8 +307,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/PtituloFMOD.fspro
-  sourceBankPath: ../../PtituloFMOD/TituloFMOD/PtituloFMOD/Build
+  sourceProjectPath: ../../NewTituloFMOD/FMODTITULO/FMODTITULO.fspro
+  sourceBankPath: ../../NewTituloFMOD/FMODTITULO/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
